@@ -1,0 +1,75 @@
+
+*
+{
+    font-family: 'Readex Pro', sans-serif;
+}
+
+body
+{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    text-align: center;
+}
+
+form .profile-name
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+    gap: 25px;
+}
+
+form .profile-name input
+{
+    width: 600px;
+    height: 60px;
+    background-color: transparent;
+    box-shadow: 2px 2px 1px white;
+    border: 1px solid white;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+}
+
+form .profile-name input::placeholder
+{
+    opacity: 75%;
+}
+
+form .profile-name input:focus
+{
+    outline: none;
+    box-shadow: none;
+    border: none;
+}
+
+form .profile-image
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+    gap: 25px;
+    margin-left: 125px;
+}
+
+@media screen and (max-width: 600px)
+{
+    h1
+    {
+        margin-left: 20px;
+    }
+    form .profile-name input
+    {
+        width: 400px;
+        height: 50px;
+        background-color: transparent;
+        box-shadow: 2px 2px 1px white;
+        border: 1px solid white;
+        border-radius: 10px;
+        text-align: center;
+        color: white;
+    }
+}

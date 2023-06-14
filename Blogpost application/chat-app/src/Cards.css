@@ -1,0 +1,205 @@
+* {
+    font-family: 'Readex Pro', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    text-align: center;
+}
+
+.Cards-all {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.Cards-all p {
+    color: white;
+}
+
+.Cards-all .card .card-data-all .card-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+    gap: 0px;
+    height: 100px;
+    flex-grow: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+}
+
+.Cards-all .card .card-data-all .card-data p {
+    color: black;
+}
+
+.Cards-all .card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+    border-radius: 20px;
+    padding: 25px;
+    margin-top: 100px;
+    width: 1000px;
+    max-width: 1000px;
+    height: fit-content;
+    max-height: fit-content;
+    background-color: white;
+    color: black;
+}
+
+.Cards-all .card .card-data-all {
+    display: flex;
+    flex-direction: row;
+    gap: 75px;
+    justify-content: first baseline;
+    align-items: first baseline;
+
+}
+
+.Cards-all .card .card-data-all .like {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    justify-content: first baseline;
+    align-items: first baseline;
+}
+
+.fa.fa-heart-o.liked {
+    color: green;
+    filter: drop-shadow(4px 4px 6px green);
+    transition: 1s;
+}
+
+.fa.fa-bookmark-o.bookmarked {
+    color: violet;
+}
+
+
+.Cards-all .card .card-data-all .like i {
+    font-size: 25px;
+}
+
+@media (max-width: 800px) {
+    .Cards-all .card .card-data-all .card-data {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0px;
+        height: 100px;
+        flex-grow: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .Cards-all .card .card-data-all {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Cards-all .card {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;        
+        border-radius: 20px;
+        padding: 50px;
+        margin-top: 100px;
+        width: 600px;
+        max-width: 600px;
+        height: fit-content;
+        max-height: fit-content;
+        background-color: white;
+        color: black;
+    }
+}
+
+@media (max-width: 600px) {
+    .Cards-all .card .card-data-all .card-data {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0px;
+        height: 100px;
+        flex-grow: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .Cards-all .card .card-data-all {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Cards-all .card {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;        
+        border-radius: 20px;
+        padding: 50px;
+        margin-top: 100px;
+        width: 400px;
+        max-width: 400px;
+        height: fit-content;
+        max-height: fit-content;
+        background-color: white;
+        color: black;
+    }
+}
+
+
+@media (max-width: 300px) {
+    .Cards-all .card .card-data-all .card-data {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0px;
+        height: 100px;
+        flex-grow: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .Cards-all .card .card-data-all {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Cards-all .card {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;        
+        border-radius: 20px;
+        padding: 50px;
+        margin-top: 100px;
+        width: 100px;
+        max-width: 100px;
+        height: fit-content;
+        max-height: fit-content;
+        background-color: white;
+        color: black;
+    }
+}
+
+
