@@ -1,0 +1,39 @@
+Create a database in mysql and here are the schema's of the table you have to create to run the application
+
+CREATE TABLE Blogpost(
+  Number INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  Id INT NOT NULL,
+  Heading TEXT NOT NULL,
+  Description TEXT NOT NULL,
+  Likes INT NOT NULL DEFAULT 0
+);
+
+
+CREATE TABLE Likes (
+  Number INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  LikeId INT DEFAULT 0,
+  BlogpostNumber INT NOT NULL,
+  UserId INT NOT NULL
+);
+
+
+CREATE TABLE Saved (
+  Number INT NOT NULL PRIMARY KEY,
+  UserId INT NOT NULL
+);
+
+
+CREATE TABLE Signup (
+  Id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  Email VARCHAR(255) NOT NULL UNIQUE,
+  Password VARCHAR(255) NOT NULL
+);
+
+
+
+CREATE TABLE User (
+  Number INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  Id INT NOT NULL,
+  Nickname TEXT NOT NULL,
+  Image LONGBLOB
+);
