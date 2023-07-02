@@ -1,0 +1,144 @@
+﻿@page
+@model Enhance.Pages.MessageModel
+<head>
+    <link rel="stylesheet" href="~/css/Message.css?version=1" asp-append-version="true" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <style>
+        #chatContainer
+        {
+            height: 500px; /* Set the desired height for the chat container */
+            overflow-y: auto;
+
+        }
+    </style>
+</head>
+<div class="chats-and-options">
+    <div class="buttons">
+        @foreach (var username in Model.Usernames)
+        {
+            <button type="button" class="user-button" onclick="setSelectedId(this, '@username.Id'); retriveChatMessage(); retriveUserChatMessage();">
+                <div class="all">
+                    <div class="user">
+                        <div class="user-image">
+                            @if (username.ImageData != null)
+                            {
+                                <img src="data:image/png;base64,@Convert.ToBase64String(username.ImageData)" alt="User Image" />
+                            }
+                            else
+                            {
+                                <img src="~/Images/use.jpg" alt="User Image" />
+                            }
+                        </div>
+                        <div class="active"></div>
+                        <div class="user-name">
+                            <p>@username.Nickname</p>
+                        </div>
+                    </div>
+                </div>
+            </button>
+        }
+    </div>
+
+    <div class="chat-display">
+        <div id="chatContainer">
+        </div>
+
+        <form id="messageForm">
+            <input type="hidden" name="selectedIdTo" id="selectedIdTo" />
+            <input type="text" name="message" autocomplete="off" placeholder="Enter your message" />
+            <button type="submit">Send</button>
+        </form>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    var idFrom;
+    function setSelectedId(button, id) {
+        $('.user-button').removeClass('active'); // Remove the 'selected' class from all buttons
+        $(button).addClass('active'); // Add the 'selected' class to the clicked button
+        $('#selectedIdTo').val(id);
+        idFrom = @Model.Id;
+
+    }
+
+    $(document).ready(function () {
+        $('#messageForm').submit(function (event) {
+            event.preventDefault();
+
+            var data = {
+                message: $('input[name="message"]').val(),
+                idTo: $('#selectedIdTo').val(),
+                idFrom: idFrom,
+            };
+
+            
+            console.log(data);
+
+            $.ajax({
+                url: 'http://localhost:3000/chat',
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify(data),
+                success: function (response) {
+                    // Handle success response
+                    console.log(response);
+
+                    $('input[name="message"]').val('');
+
+                },
+                error: function (xhr, status, error) {
+                    // Handle error
+                    console.log(xhr.responseText);
+                }
+            });
+            
+
+        });
+    });
+
+    
+    function retriveChatMessage() {
+        var data_1 = {
+            idTo: $('#selectedIdTo').val(),
+            idFrom: idFrom,
+        }
+
+
+        $.ajax({
+            url: 'http://localhost:3000/chat',
+            type: 'GET',
+            data: data_1,
+            success: function (response) {
+                // Handle success response
+                console.log(response);
+
+                var chatContainer = $('#chatContainer');
+
+                // Clear the container before adding new messages (optional)
+                chatContainer.empty();
+
+                // Loop through the response to create a new <div> for each chat message
+                response.forEach(function (message) {
+                    // Create a new <div> element
+                    var messageDiv = $('<div>').text(message.Text);
+                    messageDiv.addClass('chat-message');
+
+                    // Append the <div> element to the container
+                    chatContainer.append(messageDiv);
+                });
+            },
+            error: function (xhr, status, error) {
+                // Handle error
+                console.log(xhr.responseText);
+            }
+        });
+    }
+    retriveChatMessage();
+    setInterval(retriveChatMessage, 1000);
+
+    
+</script>

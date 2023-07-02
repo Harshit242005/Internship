@@ -1,0 +1,21 @@
+﻿@page
+@model Enhance.Pages.UserProjectDetailsModel
+
+@{
+    ViewData["Title"] = "Project Details";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/UserProjectDetails.css?version=1" asp-append-version="true" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400&display=swap" rel="stylesheet">
+</head>
+
+<div class="back"><a href="/AllProjects"><button>Back</button></a></div>
+<div class="head">
+    <div class="heading"><p>@Model.ProjectName</p></div>
+    <div class="Duration"><p>@Model.Duration @Model.DurationType</p></div>
+</div>
+<div class="Description"><p>@Model.Description</p></div>

@@ -1,0 +1,234 @@
+﻿* {
+    font-family: 'Readex Pro', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+    .main .project {
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        justify-content: center;
+        align-items: first baseline;
+    }
+
+
+        .main .project .name {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            justify-content: left;
+            align-items: flex-start;
+            display: none;
+            width: 200px;
+        }
+
+
+        .main .project .number {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main .project .price {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            width: 100px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main .project .postDate {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            width: 100px;
+            justify-content: center;
+            align-items: center;
+        }
+
+            .main .project .postDate img {
+                width: 50px;
+                height: 50px;
+                border: none;
+                border-radius: 50%;
+            }
+
+        .main .project .seeProject {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            width: 200px;
+            justify-content: center;
+            align-items: center;
+        }
+
+            .main .project .seeProject button {
+                width: 200px;
+                height: 40px;
+                border: none;
+                border-radius: 20px;
+                text-align: center;
+                color: white;
+                background-color: black;
+                margin-left: 50px;
+            }
+
+        .main .project .seeBids {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            width: 200px;
+            justify-content: center;
+            align-items: center;
+        }
+
+            .main .project .seeBids button {
+                background-color: #00FFFF;
+                color: black;
+                text-align: center;
+                width: 200px;
+                height: 40px;
+                border: none;
+                border-radius: 20px;
+                margin-left: 50px;
+            }
+
+        .main .project .deleteProject {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            width: 200px;
+            justify-content: center;
+            align-items: center;
+        }
+
+            .main .project .deleteProject button {
+                text-align: center;
+                width: 200px;
+                height: 40px;
+                border: none;
+                border-radius: 20px;
+                color: white;
+                background: linear-gradient(to bottom, #341C1C, #E10707);
+                margin-left: 50px;
+            }
+
+
+@media screen and (max-width: 1000px) {
+    .main .projects .project-card .project {
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main .projects  {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .main .project-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 200px;
+        width: 400px;
+        transition: 0.3s;
+        border-radius: 20px;
+        
+    }
+
+        
+
+        .main .projects .project-card .project .seeProject a button {
+            width: 400px;
+            margin-left: 0px;
+            height: 50px;
+            border-radius: 0px;
+            font-size: 15px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+
+    .main .projects .project-card .project .seeBids a button {
+        width: 400px;
+        margin-left: 0px;
+        height: 50px;
+        border-radius: 0px;
+        font-size: 15px;
+        color: white;
+    }
+
+    .main .projects .project-card .project .deleteProject form button {
+        width: 400px;
+        margin-left: 0px;
+        height: 50px;
+        border-radius: 0px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        font-size: 15px;
+    }
+
+    .projects .project-card .project .price
+    {
+        font-weight: bolder;
+    }
+
+        .projects .project-card .project .postDate
+        {
+            font-weight: bold;
+        }
+
+        .projects .project-card .project .number .spanText {
+            width: 400px !important;
+            height: 30px !important;
+            text-align: center;
+            font-size: 18px;
+            border-top-left-radius: 20px !important;
+            border-top-right-radius: 20px !important;
+            border-bottom-left-radius: 0px !important;
+            border-bottom-right-radius: 0px !important;
+        }
+
+    .projects .project-card .project .name
+    {
+        display: block;
+        text-align: center;
+        font-size: 20px;
+        text-shadow: none;
+        font-weight: 500;
+    }
+
+    .projects .project-card .project h4
+    {
+        display: none;
+    }
+
+
+}
