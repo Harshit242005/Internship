@@ -1,0 +1,319 @@
+﻿@{
+    ViewData["Title"] = "Xhance";
+}
+@model List<FileModel>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Xhance</title>
+    <link rel="stylesheet" href="~/css/Main.css?version=1" asp-append-version="true" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="Main-container">
+        <div id="Conatiner1" class="container-1">
+            <div class="Search-file">
+                <div class="Search">
+                    <input type="text" id="SearchBar" placeholder="Search files" autocomplete="off" />
+                    <i class="fa fa-search search-icon"></i>
+                </div>
+                <div class="File">
+                    <!-- here will come all the file and how we can show them and search them -->
+                    @foreach (var file in Model)
+                    {
+                        <div class="Files">
+                            <p>@file.Name</p>
+                        </div>
+                    }
+                </div>
+            </div>
+            <!-- this section should be fixed and should remain at the bottom of the last -->
+            <div class="AddFile-Setting">
+                <div class="AddFile">
+                    <button id="File"><i class="fa fa-plus"></i> Add File</button>
+                </div>
+                <div class="Setting">
+                    <button id="Setting"><i class="fa fa-gear"></i>Setting</button>
+                </div>
+            </div>
+        </div>
+        <div id="Input" class="container-2">
+            <div class="DisplayInfo">
+                <p class="name">Name - Today's work</p>
+                <p id="currentDate">Date - </p>
+            </div>
+            <div class="InputField">
+                <textarea placeholder="Start typing..."></textarea>
+            </div>
+        </div>
+
+        <div class="FileCreation" id="CreateFile">
+
+            <div class="Header">
+                <p>Add name of file</p>
+                <i id="close" class="fa fa-close"></i>
+            </div>
+            <div class="File">
+                <form method="post" action="/File/Create">
+                    <input type="text" placeholder="Write name of the file" name="Name" autocomplete="off" />
+                    <button type="submit">Create</button>
+                </form>
+            </div>
+        </div>
+        <div class="container-3">
+            <div class="Header">
+                <p>Setting</p>
+                <button id="back">Back</button>
+            </div>
+            <p>Choose theme</p>
+            <div class="Theme">
+                <div class="Light">
+                    <label>Light</label>
+                    <input type="radio" id="Light" name="light" checked />
+                </div>
+                <div class="Dark">
+                    <label>Dark</label>
+                    <input type="radio" name="dark" id="Dark" />
+                </div>
+            </div>
+        </div>
+
+        <!-- file deletion div to show up -->
+        <div id="hiddenDiv" style="display: none;">
+            <!-- Content of the hidden div -->
+            <div class="header">
+                <p>Delete</p>
+                <i id="closeDelete" class="fa fa-close"></i>
+            </div>
+            <form id="deleteForm" method="post" action="/File/Delete">
+                <!-- Add a hidden input to store the file name -->
+                
+                <button type="submit"><i class="fa fa-trash-o"></i></button>
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        // here is the add file function button
+        $(document).ready(function () {
+            $("#File").click(function () {
+                $(".Main-container").css("overflow-y", "hidden");
+                $(".FileCreation").css("display", "flex");
+            });
+
+            $("#close").click(function () {
+                $(".Main-container").css("overflow-y", "auto");
+                $(".FileCreation").css("display", "none");
+            });
+
+
+
+            // here will come the setting function let's see how this works
+            //setting button
+            $('#Setting').click(function () {
+                $('.container-2').css({ "display": "none" });
+                $('.container-3').css({ "display": "flex" });
+            });
+
+
+
+            //back button
+            $('#back').click(function () {
+                $('.container-2').css({ "display": "flex" });
+                $('.container-3').css({ "display": "none" });
+            })
+
+            // radio button
+            $('#Light').click(function () {
+                $("input[name='dark']").prop("checked", false);
+                $("body").css({ "background-color": "white", "color": "black" });
+                $('#back').css({ "background-color": "black", "color": "white" });
+                $("input[name='light']").css({ "border-color": "black" });
+                $("input[name='dark']").css({ "border-color": "black" });
+
+                // Light theme  change
+                $('#Conatiner1').css({ "border-right": "1px solid black" });
+                $('#SearchBar').css({ "border": "none" });
+                $('#File').css({ "background-color": "transparent", "color": "black", "text-shadow": "0px 1px 1px black" });
+                $('#Setting').css({ "background-color": "transparent", "color": "black", "text-shadow": "0px 4px 4px rgba(0, 0, 0, 0.25)" });
+            });
+
+            $('#Dark').click(function () {
+                $("input[name='light']").prop("checked", false);
+                $("body").css({ "background-color": "black", "color": "white" });
+                $('#back').css({ "background-color": "white", "color": "black" });
+                $("input[name='light']").css({ "border-color": "white" });
+                $("input[name='dark']").css({ "border-color": "white" });
+                
+
+                // Dark theme change
+                $('#Conatiner1').css({ "border-right": "1px solid white" });
+                $('#SearchBar').css({ "border": "1px solid white" });
+                $('#File').css({ "background-color": "white", "color": "black", "text-shadow": "none" });
+                $('#Setting').css({ "background-color": "white", "color": "black", "text-shadow": "none" });
+            });
+
+
+
+            // here will come the code where you can start searching for the file
+            var typingTimer;
+            var searchDelay = 500; // Delay in milliseconds before making the search request
+
+            $('#SearchBar').on('input', function () {
+                clearTimeout(typingTimer);
+                typingTimer = setTimeout(performSearch, searchDelay);
+            });
+
+            function performSearch() {
+                var searchTerm = $('#SearchBar').val();
+
+                $.ajax({
+                    url: '/File/Search',
+                    type: 'GET',
+                    data: { searchTerm: searchTerm },
+                    dataType: 'json',
+                    success: function (response) {
+                        console.log('Response is: ', response);
+
+                        // Loop through all file elements and hide them
+                        $('.Files').hide();
+
+                        // Check if the search term is empty
+                        if (searchTerm.trim() === '') {
+                            // If the search term is empty, show all existing file elements
+                            $('.Files').show();
+                        } else {
+                            // Loop through the search results and show the matching file elements
+                            response.forEach(function (file) {
+                                console.log("File name is: ", file.name); // Logging the file name
+                                $('.Files').each(function () {
+                                    if ($(this).find('p').text() === file.name) {
+                                        $(this).show();
+                                    }
+                                });
+                            });
+                        }
+                    },
+                    error: function (error) {
+                        console.log('Error:', error);
+                    }
+                });
+            }
+         
+
+            var deletingFile;
+            // there is the code to save the text file from the text area in the database
+            $('.Files').on('click', function () {
+                // Remove highlighting from all other file elements
+                $('.Files').not(this).css({ "background-color": "", "color": "" });
+
+                // Apply highlighting to the clicked file
+                $(this).css({ "background-color": "black", "color": "white" });
+                $('.InputField textarea').val('');
+                // Retrieve the clicked file's name
+                var fileName = $(this).find('p').text();
+
+               
+                // initializing the file that will be deleted
+               
+                deletingFile = $(this).find('p').text();;
+
+
+                // Update the textarea's data-file attribute with the selected file name
+                $('.InputField textarea').attr('data-file', fileName);
+                $('.DisplayInfo .name').text('Name - ' + fileName);
+                $.ajax({
+                    url: '/File/GetFileContent',
+                    type: 'GET',
+                    data: { fileName: fileName },
+                    success: function (response) {
+                        // Update the textarea with the file content
+                        $('.InputField textarea').val(response);
+                    },
+                    error: function (error) {
+                        console.log(error);
+                    }
+                });
+            });
+
+            // delete the file 
+            $('#deleteForm').on('submit', function (event) {
+                event.preventDefault();
+
+             
+                
+                // Perform your POST request to the server here using the fileName
+                // You can use AJAX or any other method to send the data to the server
+                $.ajax({
+                    type: 'POST',
+                    url: '/File/Delete', // Replace with your server URL
+                    data: { fileName: deletingFile },
+                    success: function (response) {
+                        location.reload();
+                        
+                    },
+                    error: function (error) {
+                        // Handle errors if any
+                        console.error('Error deleting file:', error);
+                    }
+                });
+            });
+
+            $('.InputField textarea').on('input', function () {
+                // Retrieve the selected file name from the textarea's data-file attribute
+                var fileName = $(this).attr('data-file');
+                
+                selectedFileName = fileName;
+                // Retrieve the text content from the textarea
+                var textContent = $(this).val();
+
+                // Save the text content to the database for the selected file
+                saveTextToDatabase(fileName, textContent);
+            });
+
+            function saveTextToDatabase(fileName, textContent) {
+                // Send an AJAX request to the server to save the text content to the database
+                $.ajax({
+                    url: '/File/SaveText',
+                    type: 'POST',
+                    data: { fileName: fileName, textContent: textContent },
+                    success: function (response) {
+                        console.log('Text saved successfully.');
+                    },
+                    error: function (error) {
+                        console.log('Error saving text:', error);
+                    }
+                });
+            }
+
+            // Get the current date
+            var currentDate = new Date().toLocaleDateString();
+            // Update the date element with the current date
+            $('#currentDate').text('Date - ' + currentDate);
+
+            // show the delete option
+            $('.Files').on('dblclick', function () {
+                $('#hiddenDiv').toggle();
+            });
+            // close the delete option
+            $('#closeDelete').click(function() {
+                $('#hiddenDiv').hide();
+            })
+            
+
+
+        });
+    </script>
+</body>
+</html>
