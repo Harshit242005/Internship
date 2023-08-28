@@ -1,9 +1,0 @@
-Chat application table schema 
-
-CREATE TABLE CHAT (
-    Number INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    IDTO INT NOT NULL,
-    IDFROM INT NOT NULL,
-    Text TEXT NOT NULL
-);
- 
