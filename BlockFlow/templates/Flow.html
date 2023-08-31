@@ -1,0 +1,148 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Flow.css') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ url_for('static', filename='site.webmanifest') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    {% for row in data %}
+    <div class="card" id="{{ row[0] }}">
+        <div class="card-body">
+            <div class="card-heading">
+                <div class="card-title">
+                    <p>Task</p>
+                    <p class="card-title-text">{{ row[2] }}</p> <!-- Assuming Name is at index 2 -->
+                </div>
+                <button class="completed-button" data-task-number="{{ row[0] }}" {% if row[5] == 1 %} disabled {% endif %}>Completed</button>
+            </div>
+
+
+
+            <div class="duration-record">
+                <p class="block">Block Time </p>
+                <p class="card-start-time">Start Time: {{ row[3] }}</p> <!-- Assuming StartTime is at index 3 -->
+                <p class="card-end-time">End Time: {{ row[4] }}</p> <!-- Assuming EndTime is at index 4 -->
+            </div>
+            <div class="extra">
+                {% if row[5] == 0 %}
+                <p class="completed">Completed status: <span>Not Completed</span></p>
+                {% else %}
+                <p class="completed">Completed status: <span>Completed</span></p>
+                {% endif %}
+                <p class="card-date">Date: {{ row[1] }}</p> <!-- Assuming Date is at index 1 -->
+                <div class="duration">
+                    <p>Duration <span>{{ row[6] }} Hours</span></p>
+                </div>
+            </div>
+            
+        </div>
+
+    </div>
+    {% endfor %}
+
+    <script>
+
+        // code to show and hide the task which are of this date or not
+        function getCurrentDate() {
+            const currentDate = new Date();
+            const year = currentDate.getFullYear();
+            const month = String(currentDate.getMonth() + 1).padStart(2, '0'); // Months are zero-based
+            const day = String(currentDate.getDate()).padStart(2, '0');
+
+            return `${year}-${month}-${day}`;
+        }
+
+        const cards = document.querySelectorAll('.card');
+        const formattedDate = getCurrentDate();
+        cards.forEach((card, index) => {
+            const cardDateElement = card.querySelector('.card-date');
+            const cardDateText = cardDateElement.textContent;
+
+
+            const cardDate = cardDateText.split(': ')[1]; // Extract date part without "Date:"
+
+            if (cardDate === formattedDate) {
+                card.classList.add('show');
+            } else {
+                card.classList.add('hide');
+            }
+        });
+
+
+        // code to show the active and inactive card and task
+        function getCurrentTime() {
+            const currentTime = new Date();
+            const hours = String(currentTime.getHours()).padStart(2, '0');
+            const minutes = String(currentTime.getMinutes()).padStart(2, '0');
+            const seconds = String(currentTime.getSeconds()).padStart(2, '0');
+
+            return `${hours}:${minutes}:${seconds}`;
+        }
+
+
+        const formatted_time = getCurrentTime();
+
+
+        cards.forEach((card, index) => {
+            const startTime = card.querySelector('.card-start-time');
+            const endTime = card.querySelector('.card-end-time');
+            const startTimeText = startTime.textContent;
+            const endTimeText = endTime.textContent;
+
+
+
+            const startTimeTextData = startTimeText.split(': ')[1]; // Extract date part without "Date:"
+            const endTimeTextData = endTimeText.split(': ')[1];
+
+            if (formatted_time >= startTimeTextData && formatted_time <= endTimeTextData) {
+                card.classList.add('active');
+
+
+            }
+            if (formatted_time > startTimeTextData && formatted_time > endTimeTextData) {
+                card.classList.add('ended');
+            }
+            if (formatted_time < startTimeTextData && formatted_time < endTimeTextData) {
+                card.classList.add("coming");
+            }
+        });
+
+
+
+        $(document).ready(function () {
+            $(".completed-button").click(function () {
+                var taskNumber = $(this).data("task-number");
+
+                // Send an AJAX request to update the task's "Completed" status in the database
+                $.ajax({
+                    type: "POST", // or "GET" depending on your backend setup
+                    url: "/update_completed_status", // Change this to the appropriate backend URL
+                    data: { taskNumber: taskNumber },
+                    success: function () {
+                        // Update the UI to reflect the completed status
+                        $(this).prop("disabled", true); // This line is missing in your provided code
+                        alert("task has been completed");
+                        location.reload(); // Reload the page to reflect the changes
+                    }
+
+                });
+            });
+        });
+
+
+    </script>
+</body>
+
+</html>
