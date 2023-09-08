@@ -1,0 +1,122 @@
+* {
+    font-family: 'Readex Pro', sans-serif;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+
+}
+
+.cards .card-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+    gap: 25px;
+    border: 2px solid white;
+    border-radius: 20px;
+    padding: 25px;
+    width: 1200px;
+    max-width: 1200px;
+    height: fit-content;
+    max-height: fit-content;
+    text-align: left;
+    background-color: white;
+    color: black;
+}
+
+.cards .card-data button.delete-button {
+
+    float: right;
+    width: 250px;
+    height: 50px;
+    background: linear-gradient(to bottom, #341C1C, #E13707);
+    color: black;
+    text-align: center;
+    border: none;
+    border-radius: 20px;
+}
+
+
+@media screen and (max-width: 1000px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    .cards .card-data {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+        border-radius: 20px;
+        padding: 50px;
+        width: 800px;
+        max-width: 800px;
+        height: fit-content;
+        max-height: fit-content;
+        text-align: center;
+        background-color: white;
+        color: black;
+    }
+
+    .cards .card-data h3
+    {
+        font-weight: 500;
+    }
+
+    .cards .card-data p
+    {
+        font-weight: 400;
+    }
+
+    .cards .card-data button.delete-button
+    {
+        color: white;
+        font-weight: 400;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    .cards .card-data {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+        border-radius: 20px;
+        padding: 50px;
+        width: 400px;
+        max-width: 400px;
+        height: fit-content;
+        max-height: fit-content;
+        text-align: center;
+        background-color: white;
+        color: black;
+    }
+
+    .cards .card-data h3
+    {
+        font-weight: 500;
+    }
+
+    .cards .card-data p
+    {
+        font-weight: 400;
+    }
+
+    .cards .card-data button.delete-button
+    {
+        color: white;
+        font-weight: 400;
+    }
+}

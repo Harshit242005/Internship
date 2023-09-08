@@ -1,0 +1,74 @@
+*
+{
+    font-family: 'Readex Pro', sans-serif;
+}
+
+body
+{
+    background-color: black;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+form
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 250px;
+}
+
+form button
+{
+    width: 300px;
+    height: 50px;
+    border: none;
+    border-radius: 20px;
+    background-color: black;
+    text-align: center;
+    color: white;
+    transition: 0.5s;
+    font-size: 20px;
+    
+}
+
+form button:hover
+{
+    background-color: rgb(28, 198, 28);
+    color: white;
+    
+}
+
+form .location
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+form .location label
+{
+    font-size: 25px;
+}
+
+form .location input
+{
+    height: 50px;
+    width: 1000px;
+    text-align: center;
+    border: none;
+    border-radius: 20px;
+    font-size: 18px;
+}
+
+
+form .location input:focus
+{
+    outline: none;
+}

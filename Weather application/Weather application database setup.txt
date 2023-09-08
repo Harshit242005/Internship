@@ -1,0 +1,20 @@
+You need to create a database for this application to store data into it 
+here is the schema of the table you need to create 
+
+CREATE TABLE Weather_data (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    Temperature FLOAT,
+    Humidity FLOAT,
+    Image VARCHAR(255),
+    RecordTime TIME,
+    Country VARCHAR(255),
+    City VARCHAR(255),
+    WeatherType VARCHAR(255),
+    Date DATE,
+    Years INT,
+    Months VARCHAR(255),
+    Dates INT
+);
+
+
+you can create any database with using the CREATE DATABASE {Name} = query in mysql and then use that database with calling it USE {database name} and the  run the given query to create the table 

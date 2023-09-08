@@ -1,0 +1,444 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+* {
+    font-family: 'Readex Pro', sans-serif;
+}
+
+
+.Main-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+}
+
+    .Main-container .container-1 {
+        border-right: 1px solid black;
+        height: 100%;
+        max-height: 100%;
+        width: 25%;
+    }
+
+        .Main-container .container-1 .Search-file {
+           
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            width: 100%;
+            height: 100%;
+            flex-grow: 1; /* Allow this section to grow to fill available space */
+            overflow-y: hidden;
+        }
+
+            .Main-container .container-1 .Search-file .Search {
+                width: max-content;
+            }
+
+                .Main-container .container-1 .Search-file .Search input {
+                    height: 50px;
+                    width: 25%;
+                    position: fixed;
+                    background-color: black;
+                    color: white;
+                    border: none;
+                }
+
+                    .Main-container .container-1 .Search-file .Search input:focus {
+                        outline: none;
+                    }
+
+                    .Main-container .container-1 .Search-file .Search input::placeholder {
+                        color: rgba(255, 255, 255, 0.5);
+                        text-align: right;
+                        padding-right: 150px;
+                        font-size: 22px;
+                    }
+
+                .Main-container .container-1 .Search-file .Search .search-icon {
+                    position: absolute;
+                    top: 3%;
+                    right: 1450px;
+                    transform: translateY(-50%);
+                    color: #888;
+                    font-size: 22px;
+                }
+
+            .Main-container .container-1 .Search-file .File {
+                
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                width: 100%;
+                margin-top: 50px;
+                height: 550px;
+                
+                overflow-y: auto; /* Enable vertical scrolling for the file list */
+                overscroll-behavior-y: auto;
+            }
+
+                .Main-container .container-1 .Search-file .File .Files {
+                    text-align: center;
+                    border: 1px solid black;
+                    width: 100%;
+                }
+
+                    .Main-container .container-1 .Search-file .File .Files:hover {
+                        background-color: #E0E0E0;
+                    }
+
+        .Main-container .container-1 .AddFile-Setting {
+            display: flex;
+            flex-direction: column;
+            justify-content: left;
+            align-items: flex-start;
+            width: 100%;
+            margin-top: 0%;
+            
+            /*margin-top: 86%;*/
+            position: fixed;
+            gap: 50px;
+        }
+
+            .Main-container .container-1 .AddFile-Setting .AddFile {
+                width: max-content;
+            }
+
+                .Main-container .container-1 .AddFile-Setting .AddFile button {
+                    height: 50px;
+                    width: 25%;
+                    position: fixed;
+                    background-color: transparent;
+                    color: black;
+                    font-size: 25px;
+                    border: 1px solid black;
+                    text-shadow: 0px 1px 1px black;
+                    font-weight: bold;
+                    transition: 0.3s;
+                }
+
+                    .Main-container .container-1 .AddFile-Setting .AddFile button:hover {
+                        text-shadow: none;
+                    }
+
+                    .Main-container .container-1 .AddFile-Setting .AddFile button i {
+                        font-size: 20px;
+                    }
+
+            .Main-container .container-1 .AddFile-Setting .Setting {
+                width: max-content;
+            }
+
+                .Main-container .container-1 .AddFile-Setting .Setting button i {
+                    font-size: 40px;
+                }
+
+                .Main-container .container-1 .AddFile-Setting .Setting button {
+                    height: 75px;
+                    width: 25%;
+                    position: fixed;
+                    background-color: transparent;
+                    color: black;
+                    font-size: 30px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 20px;
+                    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                    font-weight: bold;
+                    border: 1px solid black;
+                    transition: 0.3s;
+                }
+
+                    .Main-container .container-1 .AddFile-Setting .Setting button:hover {
+                        text-shadow: none;
+                    }
+
+                        .Main-container .container-1 .AddFile-Setting .Setting button:hover i {
+                            transform: rotate(60deg);
+                            font-size: 42px;
+                        }
+
+    .Main-container .container-2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        align-items: flex-start;
+        width: 75%;
+        z-index: 0;
+        overflow-y: hidden;
+    }
+
+        .Main-container .container-2 .DisplayInfo {
+            display: flex;
+            flex-direction: row;
+            justify-content: left;
+            align-items: flex-start;
+            background-color: black;
+            color: white;
+            width: 100%;
+            padding-left: 20px;
+            height: 50px;
+            gap: 600px;
+            border-left: 1px solid white;
+        }
+
+        .Main-container .container-2 .InputField {
+            width: 100%;
+        }
+
+            .Main-container .container-2 .InputField textarea {
+                width: 100%;
+                height: 666px;
+                max-height: 666px;
+                font-size: 16px;
+                padding: 10px;
+                max-width: 100%;
+            }
+
+                .Main-container .container-2 .InputField textarea::placeholder {
+                    padding: 5px;
+                    font-size: 18px;
+                    font-weight: bold;
+                    text-decoration: underline 2px solid black;
+                }
+
+                .Main-container .container-2 .InputField textarea:focus {
+                    outline: none;
+                }
+
+.FileCreation {
+    height: fit-content;
+    width: fit-content;
+    margin-left: -1000px;
+    margin-top: 250px;
+    border: 1px solid black;
+    box-shadow: 0px 4px 4px black;
+    padding: 20px;
+    z-index: 999;
+    border-radius: 5px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+    .FileCreation .Header {
+        display: flex;
+        flex-direction: row;
+        float: left;
+        gap: 470px;
+        justify-content: left;
+        align-items: first baseline;
+    }
+
+        .FileCreation .Header p {
+            font-size: 20px;
+            font-weight: bold;
+            color: black;
+        }
+
+        .FileCreation .Header i {
+            font-size: 30px;
+            color: black;
+        }
+
+    .FileCreation .File form {
+        display: flex;
+        flex-direction: column;
+        justify-content: right;
+        align-items: flex-end;
+        gap: 10px;
+    }
+
+        .FileCreation .File form input {
+            width: 660px;
+            height: 90px;
+            border-radius: 5px;
+        }
+
+        .FileCreation .File form button {
+            width: 200px;
+            height: 50px;
+            box-shadow: 0px 2px 4px black;
+            transition: 0.3s;
+            background-color: transparent;
+            color: black;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+            .FileCreation .File form button:hover {
+                box-shadow: none;
+                background-color: black;
+                color: white;
+            }
+
+        .FileCreation .File form input::placeholder {
+            padding-left: 20px;
+            font-size: 20px;
+        }
+
+        .FileCreation .File form input:focus {
+            outline: none;
+        }
+
+.Main-container .container-3 {
+    display: none;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+    width: 75%;
+    z-index: 0;
+    height: 100%;
+    overflow-y: hidden;
+}
+
+    .Main-container .container-3 .Header {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        align-items: first baseline
+    }
+
+        .Main-container .container-3 .Header p {
+            font-size: 25px;
+            font-weight: bold;
+            padding-left: 50px;
+            text-decoration: underline 2px solid black;
+        }
+
+    .Main-container .container-3 p {
+        padding-left: 50px;
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    .Main-container .container-3 .Header #back {
+        margin-top: 50px;
+        margin-left: 750px;
+        width: 150px;
+        height: 40px;
+        font-size: 16px;
+        box-shadow: 0px 2px 5px black;
+        transition: 0.3s;
+        background-color: black;
+        color: white;
+        text-align: center;
+        border: none;
+        text-shadow: 0px 1px 4px white;
+        border-radius: 10px;
+    }
+
+        .Main-container .container-3 .Header #back:hover {
+            box-shadow: none;
+        }
+
+    .Main-container .container-3 .Theme {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        align-items: flex-start;
+        gap: 100px;
+        margin-top: 100px;
+        padding-left: 50px;
+    }
+
+        .Main-container .container-3 .Theme .Light, .Dark {
+            display: flex;
+            flex-direction: row;
+            justify-content: left;
+            align-items: flex-start;
+            gap: 900px;
+        }
+
+            .Main-container .container-3 .Theme .Light label, .Dark label {
+                font-size: 20px;
+                font-weight: bold;
+            }
+
+            .Main-container .container-3 .Theme .Light input[type="radio"], .Dark input[type="radio"] {
+                appearance: none;
+                -webkit-appearance: none;
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+                border: 2px solid #000;
+                background-color: #000;
+                outline: none;
+            }
+
+
+
+                .Main-container .container-3 .Theme .Light input[type="radio"]:before, .Dark input[type="radio"]:before {
+                    content: "";
+                    display: block;
+                    width: 12px;
+                    height: 12px;
+                    background-color: #fff;
+                    border-radius: 50%;
+                    position: relative;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    opacity: 0;
+                    transition: opacity 0.2s ease-in-out;
+                }
+
+                .Main-container .container-3 .Theme .Light input[type="radio"]:checked:before, .Dark input[type="radio"]:checked:before {
+                    opacity: 1;
+                }
+.Main-container #hiddenDiv {
+    width: 400px;
+    z-index: 999;
+    background-color: black;
+    text-align: center;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    height: fit-content;
+    margin-left: -1000px;
+    margin-top: 250px;
+    box-shadow: 2px 2px 4px black;
+}
+
+    .Main-container #hiddenDiv .header
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 75px;
+    }
+
+        .Main-container #hiddenDiv .header p
+        {
+            font-size: 20px;
+        }
+
+        .Main-container #hiddenDiv .header i {
+            font-size: 40px;
+        }
+
+    .Main-container #hiddenDiv form
+    {
+        padding: 20px;
+    }
+
+    .Main-container #hiddenDiv form button {
+        width: 200px;
+        height: 40px;
+        border-radius: 10px;
+        font-size: 20px;
+    }

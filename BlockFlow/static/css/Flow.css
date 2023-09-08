@@ -1,0 +1,196 @@
+.card.show {
+    display: block;
+}
+
+.card.hide {
+    display: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    font-family: 'Readex Pro', sans-serif;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    width: 1000px;
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+}
+
+.card .card-body .extra {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: last baseline;
+    gap: 25px;
+}
+
+.card .card-body .extra .duration {
+    margin-left: 100px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: fit-content;
+}
+
+.card .card-body .extra .duration p {
+    color: #000;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Readex Pro;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.48px;
+}
+
+.card .card-body .extra .duration p span {
+    color: #000;
+    font-family: Readex Pro;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.48px;
+}
+
+.card .card-body .extra .completed {
+    font-size: 20px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.card .card-body .extra .completed span {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.card .card-body {
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.card .card-body .card-heading {
+    display: flex;
+    flex-direction: row;
+    gap: 250px;
+}
+
+.card .card-body .card-heading .completed-button {
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.50);
+    background: rgba(255, 255, 255, 0.00);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    width: 200px;
+    height: 60px;
+    flex-shrink: 0;
+    margin-top: 50px;
+    color: #000;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Readex Pro;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.48px;
+    transition: 0.3s;
+}
+
+.card .card-body .card-heading .completed-button:hover {
+    background-color: black;
+    color: white;
+}
+
+.card .card-body .card-heading .card-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+}
+
+.card .card-body .card-heading .card-title p {
+    color: #000;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Readex Pro;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.48px;
+}
+
+.card .card-body .card-heading .card-title .card-title-text {
+    color: #000;
+    font-family: Readex Pro;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    width: 400px;
+    margin-top: -25px;
+}
+
+.card .card-body .duration-record {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    justify-content: left;
+    align-items: last baseline;
+}
+
+.card .card-body .duration-record .block {
+    color: #000;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Readex Pro;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.64px;
+}
+
+.card .card-body .duration-record .card-start-time,
+.card-end-time {
+    color: #000;
+    font-family: Readex Pro;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.64px;
+}
+
+.card.active {
+
+    background: linear-gradient(135deg, rgba(129, 247, 255, 0.25) 0%, rgba(240, 83, 234, 0.25) 100%);
+    color: black;
+}
+
+.card.inactive {
+    color: black;
+    background-color: transparent;
+}
+
+
+.card.ended {
+    background-color: rgb(108, 255, 108);
+    color: black;
+}
+
+.card.coming {
+    background-color: transparent;
+    border: 1px solid black;
+    color: black;
+}

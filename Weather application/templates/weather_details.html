@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Weather Details</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style_2.css') }}">
+    <!--<link rel="stylesheet" href="style_2.css">-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+</head>
+
+<body class="bg-black text-white">
+    <div class="image">
+        <div class="weatherType">
+            <h3>Weather type</h3>
+            <p style="color: white;">{{ weather_type }}</p>
+        </div>
+        <img src="{{ weather_icon_url }}" alt="weather icon" />
+    </div>
+    <h1>Weather Details</h1>
+    <div class="all">
+
+        <div class="data">
+            <div class="data-points">
+                <p>Temperature: {{ temperature }}</p>
+                <p>Humidity: {{ humidity }}</p>
+            </div>
+            <div class="data-points">
+                <p>Country: {{ country }}</p>
+                <p>city: {{ city }}</p>
+                <p>Date: {{ Date }}</p>
+            </div>
+        </div>
+        <!-- Display other desired fields -->
+        <div class="back">
+            <a href="{{ url_for('home') }}"><button>Back</button></a>
+        </div>
+    </div>
+    <a class="back" href="/analysis"><button>Analysis</button></a>
+    
+</body>
+
+</html>

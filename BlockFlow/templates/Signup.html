@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Enter.css') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ url_for('static', filename='site.webmanifest') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+    <div class="heading">
+        <p class="heading-1">Signup</p>
+        <p class="heading-2">BlockFlow</p>
+    </div>
+    <form action="/Signup" method="post">
+        <div class="data">
+            <label>name</label><br>
+            <input type="text" name="name" id="name">
+        </div>
+        <div class="data">
+            <label>email</label><br>
+            <input type="email" name="email" id="email">
+        </div>
+        <div class="data">
+            <label>password</label><br>
+            <input type="password" name="password" id="password">
+        </div>
+        <button type="submit">Signup</button>
+    </form>
+    <div class="Second" style=" margin-top: -200px;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="618" height="529" viewBox="0 0 618 529" fill="none">
+            <path d="M617.905 540.362L217.965 533.381L0.24111 -4.73894e-05L624.406 167.919L617.905 540.362Z"
+                fill="url(#paint0_linear_2143_7)" />
+            <defs>
+                <linearGradient id="paint0_linear_2143_7" x1="617.905" y1="540.362" x2="-74.3774" y2="-79.8145"
+                    gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#00FFD1" stop-opacity="0.24" />
+                </linearGradient>
+            </defs>
+        </svg>
+    </div>
+</body>
+</html>

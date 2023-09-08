@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+    padding: 0;
+
+}
+
+* {
+
+    font-family: 'Readex Pro', sans-serif;
+}
+
+.heading {
+    font-size: 24px;
+    color: black;
+    font-weight: bold;
+    padding-left: 100px;
+    padding-top: 100px;
+}
+
+.desc {
+    font-size: 16px;
+
+    color: black;
+    padding-left: 100px;
+    width: 1000px;
+    padding-top: 25px;
+}
+
+form {
+    padding-left: 100px;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+form .data {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+    gap: 25px;
+}
+
+form .data label {
+    font-weight: bold;
+    font-size: 28px;
+    color: black;
+    text-transform: capitalize;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+form .data input[type="text"] {
+    width: 800px;
+    height: 50px;
+}
+
+form .data input::placeholder {
+    color: rgba(0, 0, 0, 0.25);
+    padding-left: 25px;
+}
+
+form .data input:focus {
+    outline: none;
+}
+
+form .data input[type="time"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #ffffff;
+    background-color: black;
+}
+
+form .data input[type="time"]::-webkit-calendar-picker-indicator {
+    background: rgb(255, 255, 255);
+    color: #ffffff;
+    cursor: pointer;
+}
+
+form button {
+    width: 200px;
+    height: 40px;
+    background-color: transparent;
+    border: 2px solid rgba(0, 0, 0, 0.15);
+    color: rgba(0, 0, 0, 0.25);
+    text-align: center;
+    border-radius: 10px;
+    transition: 0.3s;
+    font-size: 14px;
+    margin-top: 25px;
+}
+
+form button:hover {
+    border: 1px solid black;
+    border-radius: 15px;
+    color: black;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+form button:focus {
+    outline: none;
+}
