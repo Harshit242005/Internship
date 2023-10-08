@@ -1,0 +1,214 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    font-family: Readex Pro;
+}
+
+
+.BackButton {
+    border-radius: 10px;
+    background: #000;
+    box-shadow: 0px 4px 12px 0px #000;
+    width: 200px;
+    height: 60px;
+    flex-shrink: 0;
+    color: #FFF;
+    font-family: Readex Pro;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+    margin-left: 25px;
+    margin-top: 50px;
+}
+
+    .BackButton svg {
+        width: 30px;
+        height: 30px;
+        transition: 0.3s;
+    }
+
+    .BackButton:hover {
+        box-shadow: none;
+        gap: 20px;
+    }
+
+        .BackButton:hover svg {
+            transform: scale(1.5);
+        }
+
+.head-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+    margin-left: 25px;
+    margin-top: 25px;
+}
+
+
+    .head-data .head {
+        color: #000;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        font-family: Readex Pro;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    .head-data img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: none;
+    }
+
+    .head-data .second-head-data {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        align-items: last baseline;
+        gap: 100px;
+    }
+
+        .head-data .second-head-data .head {
+            color: #000;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            font-family: Readex Pro;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    justify-content: left;
+    align-items: first baseline;
+}
+
+    .container form {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+        .container form .data {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+            .container form .data label {
+                color: #000;
+                font-family: Readex Pro;
+                font-size: 32px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+            }
+
+            .container form .data input {
+                width: 800px;
+                height: 60px;
+                flex-shrink: 0;
+                border: 1px solid rgba(0, 0, 0, 0.25);
+            }
+
+            .container form .data textarea {
+                width: 800px;
+                height: 360px;
+                max-height: 360px;
+                max-width: 800px;
+                flex-shrink: 0;
+                padding-left: 25px;
+                padding-top: 25px;
+                border: 1px solid rgba(0, 0, 0, 0.25);
+            }
+
+            .container form .data input::placeholder {
+                color: rgba(0, 0, 0, 0.25);
+                font-family: Readex Pro;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                padding-left: 25px;
+            }
+
+            .container form .data textarea::placeholder {
+                color: rgba(0, 0, 0, 0.25);
+                font-family: Readex Pro;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                padding-left: 10px;
+                padding-top: 10px;
+            }
+
+            .container form .data input:focus, .container form .data textarea:focus {
+                outline: none;
+            }
+
+            .container form .buttons {
+                display: flex;
+                flex-direction: row;
+                gap: 100px;
+                margin-bottom: 10px;
+            }
+
+            .container form .buttons .leave {
+                width: 200px;
+                height: 60px;
+                flex-shrink: 0;
+                border-radius: 10px;
+                background: #00FF19;
+                box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.25);
+                border: none;
+                color: #FFF;
+                font-family: Readex Pro;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+                transition: 0.3s;
+            }
+
+                .container form .buttons .leave:hover, .container form .buttons .assign:hover
+                {
+                    box-shadow: none;
+                }
+
+                .container form .buttons .assign {
+                    width: 200px;
+                    height: 60px;
+                    flex-shrink: 0;
+                    border-radius: 10px;
+                    background: black;
+                    box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.25);
+                    border: none;
+                    color: #FFF;
+                    font-family: Readex Pro;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                    transition: 0.3s;
+                }

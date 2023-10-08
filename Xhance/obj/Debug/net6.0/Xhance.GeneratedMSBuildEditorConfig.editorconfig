@@ -9,41 +9,41 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Xhance
 build_property.RootNamespace = Xhance
-build_property.ProjectDir = C:\Users\abc\source\repos\Xhance\
+build_property.ProjectDir = C:\Users\abc\Documents\GitHub\Internship\Xhance\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\abc\source\repos\Xhance
+build_property.MSBuildProjectDirectory = C:\Users\abc\Documents\GitHub\Internship\Xhance
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/abc/source/repos/Xhance/Views/Home/Index.cshtml]
+[C:/Users/abc/Documents/GitHub/Internship/Xhance/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/abc/source/repos/Xhance/Views/Home/Main.cshtml]
+[C:/Users/abc/Documents/GitHub/Internship/Xhance/Views/Home/Main.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxNYWluLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/abc/source/repos/Xhance/Views/Home/Privacy.cshtml]
+[C:/Users/abc/Documents/GitHub/Internship/Xhance/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/abc/source/repos/Xhance/Views/Shared/Error.cshtml]
+[C:/Users/abc/Documents/GitHub/Internship/Xhance/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/abc/source/repos/Xhance/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/abc/Documents/GitHub/Internship/Xhance/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/abc/source/repos/Xhance/Views/_ViewImports.cshtml]
+[C:/Users/abc/Documents/GitHub/Internship/Xhance/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/abc/source/repos/Xhance/Views/_ViewStart.cshtml]
+[C:/Users/abc/Documents/GitHub/Internship/Xhance/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/abc/source/repos/Xhance/Views/Shared/_Layout.cshtml]
+[C:/Users/abc/Documents/GitHub/Internship/Xhance/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-lmnweq8w2s
