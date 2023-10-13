@@ -1,0 +1,78 @@
+﻿@page
+@model ProjectPro.Pages.TasksModel
+@{
+    ViewData["Title"] = "task Status";
+}
+
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProjectPro</title>
+    <link rel="stylesheet" href="~/css/Tasks.css" asp-append-version="true">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap"
+          rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+
+<a href="@Url.Page("/Home", new { Id = Model.Id })">
+    <button class="BackButton">
+        <svg xmlns="http://www.w3.org/2000/svg" width="78" height="38"
+             viewBox="0 0 78 38" fill="none">
+            <path d="M1.23223 17.2322C0.255922 18.2085 0.255922 19.7915 1.23223 20.7678L17.1421 36.6777C18.1184 37.654 19.7014 37.654 20.6777 36.6777C21.654 35.7014 21.654 34.1184 20.6777 33.1421L6.53553 19L20.6777 4.85786C21.654 3.88155 21.654 2.29864 20.6777 1.32233C19.7014 0.34602 18.1184 0.34602 17.1421 1.32233L1.23223 17.2322ZM3 21.5H78V16.5H3V21.5Z"
+                  fill="white" />
+        </svg>Back
+    </button>
+</a>
+
+<div class="tasks">
+    @foreach (var task in Model.TaskDetails)
+    {
+        <div class="task">
+            <p>@task.Heading</p>
+            <div class="popup" id="desc-@task.Number">
+                <p>@task.Description</p>
+                <button class="close-popup">Close</button>
+            </div>
+            <button class="show-description" data-taskid="@task.Number">Description</button>
+            <p>@task.Date.ToShortDateString()</p>
+            @if (@task.Status == 1)
+            {
+                <p>Completed</p>
+            }
+            else
+            {
+                <p>Incomplete</p>
+            }
+            <form method="post">
+                <input type="hidden" name="Number" value="@task.Number"/>
+            <button type="submit">Approve</button>
+            </form>
+        </div>
+    }
+</div>
+
+<script>
+    $(document).ready(function () {
+        $(".show-description").click(function () {
+            var taskId = $(this).data("taskid");
+            $("#desc-" + taskId).toggle(); // Toggle visibility
+
+            $("body").addClass("modal-open");
+        });
+
+        $(".close-popup").click(function () {
+            $(this).closest(".popup").hide(); // Hide the closest popup
+            $("body").removeClass("modal-open");
+        });
+    });
+
+</script>
