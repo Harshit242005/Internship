@@ -1,0 +1,148 @@
+﻿.BackButton {
+    border-radius: 10px;
+    background: #000;
+    box-shadow: 0px 4px 12px 0px #000;
+    width: 200px;
+    height: 60px;
+    flex-shrink: 0;
+    color: #FFF;
+    font-family: Readex Pro;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+    margin-left: 25px;
+    margin-top: 25px;
+}
+
+    .BackButton svg {
+        width: 30px;
+        height: 30px;
+        transition: 0.3s;
+    }
+
+    .BackButton:hover {
+        box-shadow: none;
+        gap: 20px;
+    }
+
+        .BackButton:hover svg {
+            transform: scale(1.5);
+        }
+
+a {
+    text-decoration: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.data {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+    .data label {
+        color: #000;
+        font-family: Readex Pro;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    .data input::placeholder {
+        color: rgba(0, 0, 0, 0.50);
+        font-family: Readex Pro;
+        font-size: 14px;
+        padding-left: 25px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+.image {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: flex-start;
+    gap: 590px;
+    margin-top: 10px;
+}
+
+    .image label {
+        color: #000;
+        font-family: Readex Pro;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+.data input:focus {
+    outline: none;
+}
+
+.data input {
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.00);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    width: 800px;
+    height: 80px;
+    flex-shrink: 0;
+    border: none;
+}
+
+.UploadProfileButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    background: #000;
+    box-shadow: 0px 4px 16px 0px #000;
+    width: 200px;
+    height: 60px;
+    flex-shrink: 0;
+    transition: 0.3s;
+    color: #FFF;
+    font-family: Readex Pro;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: relative;
+    top: 100px;
+    left: 300px;
+    text-transform: capitalize;
+}
+
+    .UploadProfileButton svg {
+        width: 25px;
+        height: 25px;
+        transition: 0.5s;
+    }
+
+    .UploadProfileButton:hover {
+        box-shadow: none;
+    }
+
+        .UploadProfileButton:hover svg {
+            width: 30px;
+            height: 30px;
+        }

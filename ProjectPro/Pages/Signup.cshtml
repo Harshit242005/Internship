@@ -1,0 +1,54 @@
+﻿@page
+@model ProjectPro.Pages.SignupModel
+@{
+    ViewData["Title"] = "Signup";
+}
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProjectPro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap"
+          rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/Signup.css" asp-append-version="true">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="left">
+            <div class="headImageText">
+                <img src="~/Image/Icon.svg" alt="ProjectPro Icon" />
+                <p class="headText">
+                    Experience the future of project management with Project Pro. Streamline
+                    collaboration,
+                    boost productivity,
+                    and
+                    achieve your project goals like a pro
+                </p>
+            </div>
+
+            <form method="post">
+                <div class="data">
+                    <label>Gmail</label>
+                    <input type="email" autocomplete="off" asp-for="Email" placeholder="Type your email here...">
+                </div>
+                <div class="data">
+                    <label>Password</label>
+                    <input type="password" autocomplete="off" asp-for="Password" placeholder="Type your password here...">
+                </div>
+                <button>Signup</button>
+            </form>
+        </div>
+        <div class="right">
+            <p class="head">Signup</p>
+        </div>
+    </div>
+</body>
