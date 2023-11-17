@@ -1,0 +1,203 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    font-family: 'Readex Pro', sans-serif;
+}
+
+.createButton {
+    float: right;
+    margin-right: -120px;
+    margin-top: -16px;
+}
+
+    .createButton a button {
+        width: 200px;
+        height: 40px;
+        border: none;
+        border-radius: 00px;
+        background-color: black;
+        color: white;
+        text-align: center;
+        outline: none;
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+        transition: 0.3s;
+    }
+
+        .createButton a button:hover {
+            box-shadow: none;
+            border-bottom-left-radius: 5px;
+        }
+
+.applicantButton {
+    float: left;
+    margin-left: -120px;
+    margin-top: -16px;
+}
+
+    .applicantButton a button {
+        width: 200px;
+        height: 40px;
+        border: none;
+        border-radius: 0px;
+        background-color: black;
+        color: white;
+        text-align: center;
+        outline: none;
+        transition: 0.3s;
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    }
+
+    .applicantButton a button:hover {
+        box-shadow: none;
+        border-bottom-right-radius: 5px;
+    }
+
+.main .project .Apply button {
+    width: 100px;
+    height: 40px;
+    border: 1px solid black;
+    background-color: transparent;
+    color: black;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+    .main .project .Apply button:hover {
+        background-color: black;
+        color: white;
+        border: none;
+    }
+
+.main .project .seeProject span {
+    display: none;
+}
+
+.main .project .price span {
+    display: none;
+}
+
+.main .project .seeBids span {
+    display: none;
+}
+
+.main .project .head {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+@media screen and (max-width: 800px) {
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+    }
+
+        .buttons .createButton {
+            margin-right: 0;
+            margin-top: -14px;
+        }
+
+            .buttons .createButton a button {
+                width: 500px;
+                height: 40px;
+                border: none;
+                border-radius: 0px;
+                background-color: black;
+                color: white;
+                text-align: center;
+                transition: 0.3s;
+            }
+
+                .buttons .createButton a button:hover {
+                    background-color: white;
+                    color: black
+                }
+
+        .buttons .applicantButton {
+            float: right;
+            margin-left: 0px;
+        }
+
+            .buttons .applicantButton a button {
+                width: 500px;
+                height: 40px;
+                border-top: 1px solid white;
+                border-radius: 0px;
+                background-color: black;
+                color: white;
+                text-align: center;
+                transition: 0.3s;
+            }
+
+                .buttons .applicantButton a button:hover {
+                    background-color: white;
+                    color: black;
+                }
+
+    .main .project .head {
+        display: none;
+    }
+
+
+    .main .project {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 400px;
+        border-top: 0px;
+        height: fit-content;
+        transition: 1s;
+        box-shadow: 4px 10px 5px black;
+    }
+
+
+
+        .main .project .postDate img {
+            width: 400px !important;
+            height: 200px !important;
+            border-radius: 0px !important;
+        }
+
+        .main .project .Apply form button {
+            width: 400px;
+            border: 1px solid black;
+            border-radius: 0px;
+            margin-top: -150px;
+        }
+
+        .main .project .price p {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: -40px;
+        }
+
+        .main .project .seeProject p {
+            font-size: 18px;
+            margin-top: -40px;
+        }
+
+        .main .project .seeBids p {
+            margin-top: -40px;
+        }
+
+        .main .project .seeProject span {
+            display: block;
+        }
+
+        .main .project .price span {
+            display: block;
+        }
+
+        .main .project .seeBids span {
+            display: block;
+        }
+}

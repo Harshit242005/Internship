@@ -1,0 +1,21 @@
+﻿@page
+@model PrivacyModel
+@{
+    ViewData["Title"] = "Privacy Policy";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/GetCode.css?version=1" asp-append-version="true" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400&display=swap" rel="stylesheet">
+</head>
+
+
+<form method="post">
+    <div class="code">
+        <label>Enter  code</label>
+        <input type="text" autocomplete="off" placeholder="code from gmail" name="Code" value="@Model.Code" />
+    </div>
+    <button class="verify" type="submit">Verify</button>
+</form>

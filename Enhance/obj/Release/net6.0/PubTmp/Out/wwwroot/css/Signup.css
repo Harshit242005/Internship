@@ -1,0 +1,83 @@
+﻿* {
+    font-family: 'Readex Pro', sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-image: url(/Images/LoginSecond.svg);
+    background-origin: border-box;
+    background-position: right;
+    background-size: contain;
+    background-repeat: no-repeat
+
+}
+
+
+
+
+form {
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+
+    form .inputs {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        justify-content: left;
+        align-items: flex-start;
+    }
+
+        form .inputs label {
+            color: black;
+        }
+
+        form .inputs input {
+            width: 750px;
+            height: 100px;
+            background-color: transparent;
+            border: 1px solid black;
+            border-radius: 10px;
+            color: black;
+            box-shadow: 2px 2px 0px white;
+            transition: 0.3s;
+            box-shadow: 0px 4px 1px 1px black;
+        }
+
+            form .inputs input::placeholder {
+                padding-left: 50px;
+            }
+
+            form .inputs input:focus {
+                outline: none;
+                box-shadow: none;
+            }
+
+
+form .getCode
+{
+    width: 360px;
+    height: 60px;
+    background-color: transparent;
+    color: black;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 22px;
+    box-shadow: 2px 2px 0px white;
+    font-size: 18px;
+    transition: 0.3s;
+    
+}
+
+form .getCode:hover
+{
+    box-shadow: none;
+    background-color: black;
+    color: white;
+}

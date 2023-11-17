@@ -1,0 +1,160 @@
+﻿* {
+    font-family: 'Readex Pro', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+a button.backbutton {
+    float: left;
+    width: 400px;
+    height: 80px;
+    margin-top: 50px;
+    background: black;
+    color: white;
+    box-shadow: 10px 10px 32px rgba(0, 0, 0, .5);
+    font-size: 22px;
+    font-weight: 400;
+    border: none;
+    transition: 0.5s;
+    text-align: center;
+}
+
+
+ img {
+    position: relative;
+    z-index: 999;
+    top: 1000px;
+    left: 100px;
+    animation-name: box;
+    animation-delay: 2s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    opacity: 0;
+}
+
+ img.second {
+    position: relative;
+    z-index: 999;
+    top: 1000px;
+    left: 100px;
+    animation-name: box1;
+    animation-delay: 2.2s;
+    animation-duration: 1.3s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    opacity: 0;
+}
+
+ img.third {
+    position: relative;
+    z-index: 999;
+    top: 1000px;
+    left: 100px;
+    animation-name: box2;
+    animation-delay: 2.4s;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+
+    opacity: 0;
+}
+
+@keyframes box {
+    from
+    {
+        top: 1000px;
+        opacity: 0;
+    }
+
+    to
+    {
+        top: 100px;
+        opacity: 1;
+        left: 165px;
+    }
+}
+
+@keyframes box1 {
+    from {
+        top: 1000px;
+        opacity: 0;
+    }
+
+    to {
+        top: 175px;
+        opacity: 1;
+        left: 20px;
+    }
+}
+
+@keyframes box2 {
+    from {
+        top: 1000px;
+        opacity: 0;
+    }
+
+    to {
+        top: 175px;
+        opacity: 1;
+        left: 5px;
+    }
+}
+
+
+
+    a button.backbutton:hover {
+        box-shadow: none;
+        border-radius: 10px;
+        text-shadow: 0px 4px 15px white;
+    }
+
+    .Cid {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        text-shadow: 1px 2px 3px rbga(0, 0, 0, 0.25);
+        margin-top: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        align-items: flex-start;
+    }
+
+        .Cid .cidHead {
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, .25);
+            text-transform: capitalize;
+            text-decoration: underline 2px solid black;
+            font-weight: bold;
+            font-size: 25px;
+        }
+
+            .Cid  .cidDesc {
+                
+                text-align: left;
+                width: 800px;
+                font-weight: 400;
+                font-size: 20px;
+            }
+
+            .Cid form button {
+                width: 600px;
+                height: 50px;
+                font-weight: 400;
+                border: none;
+                border-radius: 10px;
+                font-size: 18px;
+                transition: 0.3s
+            }
+
+    .Cid form button:hover {
+        background-color: #04FF1D;
+    }

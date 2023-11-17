@@ -1,0 +1,828 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+}
+
+.top-info {
+    width: fit-content;
+}
+
+    .top-info img {
+        display: block;
+        width: 117.9%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        border: none;
+        margin-left: -120px;
+    }
+
+
+
+    .top-info .info-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        gap: 10px;
+        align-items: flex-start;
+    }
+
+        .top-info .info-text .heading {
+            color: white;
+            font-weight: 400;
+            width: 500px;
+            position: relative;
+            top: -450px;
+            font-family: 'Readex Pro', sans-serif;
+            font-size: 25px;
+            text-decoration: underline 1px solid white;
+            /* text animation */
+            margin-left: -2000px;
+            opacity: 0;
+            animation-name: MoveRight_1;
+            animation-delay: 1s;
+            animation-duration: 1s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-in-out;
+        }
+
+
+
+
+        .top-info .info-text .intro {
+            width: 700px;
+            position: relative;
+            top: -350px;
+            color: white;
+            font-family: 'Readex Pro', sans-serif;
+            font-size: 15px;
+            font-weight: lighter;
+            text-align: left;
+            line-height: 150%;
+            /* text animation */
+            margin-left: -2000px;
+            opacity: 0;
+            animation-name: MoveRight_2;
+            animation-delay: 2s;
+            animation-duration: 1s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-in-out;
+        }
+
+    .top-info .button {
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        justify-content: right;
+        align-items: flex-end;
+        position: relative;
+        top: -700px;
+        padding-right: -800px;
+        opacity: 0;
+        animation-name: FadeIn;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in-out;
+    }
+
+        .top-info .button a button.sign {
+            width: 250px;
+            height: 60px;
+            border-radius: 10px;
+            background-color: transparent;
+            text-align: center;
+            border: 1px solid white;
+            z-index: 1;
+            transition: background-color 1s, box-shadow 2s;
+            text-decoration: none;
+            color: white;
+            font-family: 'Readex Pro', sans-serif;
+        }
+
+
+
+        .top-info .button a .log {
+            width: 250px;
+            height: 60px;
+            border-radius: 10px;
+            background-color: transparent;
+            text-align: center;
+            border: 1px solid rgba(0, 255, 0, 0.5);
+            z-index: 1;
+            margin-right: -50px;
+            transition: border-color 2s;
+            color: rgba(0, 255, 0, 0.5);
+            font-family: 'Readex Pro', sans-serif;
+            transition: color 1s;
+        }
+
+
+
+        .top-info .button a .sign:hover {
+            background-color: white;
+            border: none;
+            box-shadow: 2px 2px 0px rgba(0, 255, 0, 1);
+            color: black;
+        }
+
+
+
+        .top-info .button a .log:hover {
+            border: 2px solid rgba(0, 255, 0, 1);
+            color: rgba(0, 255, 0, 1);
+        }
+
+
+
+.heading-2 {
+    font-family: 'Readex Pro', sans-serif;
+    text-align: center;
+    margin-top: -200px;
+    text-shadow: 0px 2px 4px black;
+    padding-top: 75px;
+}
+
+.group {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-content: last baseline;
+    margin-left: -100px;
+    margin-top: 25px;
+}
+
+    .group img {
+        width: 236px;
+        height: 164px;
+        margin-top: 100px;
+        margin-left: 100px;
+    }
+
+    .group .group-text {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        justify-content: center;
+        align-items: flex-start;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 100px;
+        font-family: 'Readex Pro', sans-serif;
+        width: 850px;
+    }
+
+        .group .group-text h4 {
+            font-weight: 600;
+            text-decoration: underline 3px solid black;
+            font-size: 24px;
+        }
+
+        .group .group-text p {
+            line-height: 200%;
+            font-size: 16px;
+            text-shadow: 0px 1px 2px black;
+        }
+
+
+.importance {
+    margin-top: 100px;
+}
+
+    .importance img {
+        display: block;
+        width: 117.9%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        border: none;
+        margin-left: -120px;
+    }
+
+.present {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    justify-content: left;
+    align-items: flex-start;
+    margin-top: 100px;
+}
+
+    .present .present-heading {
+        font-family: 'Readex Pro', sans-serif;
+        text-align: left;
+    }
+
+    .present .first {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+        .present .first p {
+            font-family: 'Readex Pro', sans-serif;
+            z-index: 1;
+            width: 800px;
+            text-align: left;
+            text-shadow: 0px 1px 2px black;
+        }
+
+        .present .first img {
+            width: 350px;
+            height: 250px;
+            z-index: 0;
+        }
+
+    .present .second {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+        .present .second p {
+            font-family: 'Readex Pro', sans-serif;
+            z-index: 1;
+            width: 800px;
+            text-align: right;
+            text-shadow: 0px 1px 2px black;
+        }
+
+        .present .second img {
+            width: 350px;
+            height: 250px;
+            z-index: 0;
+        }
+
+    .present .third {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+        .present .third p {
+            font-family: 'Readex Pro', sans-serif;
+            z-index: 1;
+            width: 800px;
+            text-align: left;
+            text-shadow: 0px 1px 2px black;
+        }
+
+        .present .third img {
+            width: 350px;
+            height: 250px;
+            z-index: 0;
+        }
+
+.importance .attract {
+    width: 900px;
+    font-family: 'Readex Pro', sans-serif;
+    position: relative;
+    top: -400px;
+    text-align: left;
+    color: white;
+    line-height: 200%;
+    height: fit-content;
+}
+
+.importance .button1 {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    justify-content: right;
+    align-items: flex-end;
+    position: relative;
+    z-index: 1;
+    margin-top: -200px;
+}
+
+    .importance .button1 a button.sign1 {
+        width: 250px;
+        height: 60px;
+        border-radius: 10px;
+        background-color: transparent;
+        text-align: center;
+        border: 1px solid white;
+        z-index: 1;
+        transition: background-color 1s, box-shadow 2s;
+        text-decoration: none;
+        color: white;
+        font-family: 'Readex Pro', sans-serif;
+    }
+
+
+
+    .importance .button1 a button.log1 {
+        width: 250px;
+        height: 60px;
+        border-radius: 10px;
+        background-color: transparent;
+        text-align: center;
+        border: 1px solid rgba(0, 255, 0, 0.5);
+        z-index: 1;
+        margin-right: -50px;
+        transition: border-color 2s;
+        color: rgba(0, 255, 0, 0.5);
+        font-family: 'Readex Pro', sans-serif;
+        transition: color 1s;
+    }
+
+    .importance .button1 a button.sign1:hover {
+        background-color: white;
+        border: none;
+        box-shadow: 2px 2px 0px rgba(0, 255, 0, 1);
+        color: black;
+    }
+
+
+
+
+
+
+    .importance .button1 a button.log1:hover {
+        border: 2px solid rgba(0, 255, 0, 1);
+        color: rgba(0, 255, 0, 1);
+    }
+
+
+
+.need {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 200px;
+}
+
+    .need h4 {
+        font-family: 'Readex Pro', sans-serif;
+        text-align: center;
+        height: fit-content;
+        text-shadow: 0px 1px 2px black;
+    }
+
+    .need p {
+        font-family: 'Readex Pro', sans-serif;
+        text-align: center;
+        height: fit-content;
+    }
+
+    .need .money {
+        display: flex;
+        justify-content: left;
+        align-items: flex-start;
+        flex-direction: row;
+        gap: 200px;
+        margin-left: 120px;
+    }
+
+        .need .money h3 {
+            font-family: 'Readex Pro', sans-serif;
+            text-align: left;
+            height: fit-content;
+            width: 500px;
+            text-shadow: 1px 1px 1px black;
+        }
+
+        .need .money img {
+            width: 250px;
+            height: 200px;
+        }
+
+
+
+
+/* giving out the animation */
+@keyframes FadeIn
+{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes MoveRight_1
+{
+    from {opacity: 0; margin-left: -2000px}
+    to {opacity: 1; margin-left: 0px}
+}
+
+@keyframes MoveRight_2 {
+    from {
+        opacity: 0;
+        margin-left: -2000px
+    }
+
+    to {
+        opacity: 1;
+        margin-left: 0px;
+    }
+}
+
+
+@media only screen and (max-width: 600px)
+{
+    body
+    {
+        overflow-x: hidden;
+    }
+
+    .top-info img {
+        display: block;
+        width: 127%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        border: none;
+        margin-left: -120px;
+    }
+
+    .top-info .button {
+        float: right;
+        display: flex;
+        flex-direction: row;
+        gap: 25px;
+        justify-content: left;
+        align-items: flex-start;
+        position: relative;
+        top: -320px;
+        padding-right: 50px;
+        opacity: 0;
+        animation-name: FadeIn;
+        animation-delay: 2s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in-out;
+
+    }
+
+    .top-info .info-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        gap: 10px;
+        align-items: flex-start;
+    }
+
+        .top-info .info-text .heading {
+            color: white;
+            font-weight: 400;
+            width: fit-content;
+            position: relative;
+            top: -200px;
+            font-family: 'Readex Pro', sans-serif;
+            font-size: 16px;
+            
+            /* text animation */
+            
+            opacity: 0;
+            animation-name: MoveRight_1;
+            animation-delay: 3s;
+            animation-duration: 1s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-in-out;
+        }
+
+
+
+
+        .top-info .info-text .intro {
+            width: fit-content;
+            position: relative;
+            
+            color: white;
+            font-family: 'Readex Pro', sans-serif;
+            font-size: 12px;
+            font-weight: lighter;
+            text-align: left;
+            line-height: 150%;
+            margin-top: 120px;
+            opacity: 0;
+            animation-name: MoveRight_2;
+            animation-delay: 4s;
+            animation-duration: 1s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-in-out;
+        }
+
+    .top-info .button a button.sign {
+        width: 150px;
+        height: 50px;
+        border-radius: 10px;
+        background-color: transparent;
+        text-align: center;
+        border: 1px solid white;
+        z-index: 1;
+        transition: background-color 1s, box-shadow 2s;
+        text-decoration: none;
+        color: white;
+        font-family: 'Readex Pro', sans-serif;
+    }
+
+
+
+    .top-info .button a .log {
+        width: 150px;
+        height: 50px;
+        border-radius: 10px;
+        background-color: transparent;
+        text-align: center;
+        border: 1px solid rgba(0, 255, 0, 0.5);
+        z-index: 1;
+        margin-right: -50px;
+        transition: border-color 2s;
+        color: rgba(0, 255, 0, 0.5);
+        font-family: 'Readex Pro', sans-serif;
+        transition: color 1s;
+    }
+
+
+
+    .top-info .button a .sign:hover {
+        background-color: white;
+        border: none;
+        box-shadow: 2px 2px 0px rgba(0, 255, 0, 1);
+        color: black;
+    }
+
+
+
+    .top-info .button a .log:hover {
+        border: 2px solid rgba(0, 255, 0, 1);
+        color: rgba(0, 255, 0, 1);
+    }
+
+
+
+    .heading-2 {
+        font-family: 'Readex Pro', sans-serif;
+        text-align: center;
+        margin-top: -200px;
+        text-shadow: 0px 2px 4px black;
+        padding-top: 25px;
+    }
+
+
+    .group {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        margin-top: 10px;
+    }
+
+        .group img {
+            width: 236px;
+            height: 164px;
+            margin-top: 10px;
+            margin-left: 100px;
+        }
+
+        .group .group-text {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            justify-content: center;
+            align-items: flex-start;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 10px;
+            font-family: 'Readex Pro', sans-serif;
+            width: 500px;
+        }
+
+            .group .group-text h4 {
+                font-weight: 600;
+                text-decoration: underline 3px solid black;
+                font-size: 24px;
+            }
+
+            .group .group-text p {
+                line-height: 200%;
+                font-size: 16px;
+                text-shadow: 0px 1px 2px black;
+            }
+
+
+    .importance {
+        margin-top: 100px;
+    }
+
+        .importance img {
+            display: block;
+            width: 120%;
+            height: auto;
+            margin: 0;
+            padding: 0;
+            border: none;
+            margin-left: -70px;
+        }
+
+
+    .present {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        justify-content: center;
+        align-items: center;
+        margin-top: 100px;
+    }
+
+        .present .present-heading {
+            font-family: 'Readex Pro', sans-serif;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .present .first {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 100px
+        }
+
+            .present .first p {
+                font-family: 'Readex Pro', sans-serif;
+                z-index: 1;
+                width: 600px;
+                text-align: center;
+                text-shadow: 0px 1px 2px black;
+            }
+
+            .present .first img {
+                width: 300px;
+                height: 200px;
+                z-index: 0;
+            }
+
+        .present .second {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 100px;
+        }
+
+            .present .second p {
+                font-family: 'Readex Pro', sans-serif;
+                z-index: 1;
+                width: 600px;
+                text-align: center;
+                text-shadow: 0px 1px 2px black;
+            }
+
+            .present .second img {
+                width: 300px;
+                height: 200px;
+                z-index: 0;
+            }
+
+        .present .third {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 100px;
+        }
+
+            .present .third p {
+                font-family: 'Readex Pro', sans-serif;
+                z-index: 1;
+                width: 500px;
+                text-align: center;
+                text-shadow: 0px 1px 2px black;
+            }
+
+            .present .third img {
+                width: 300px;
+                height: 200px;
+                z-index: 0;
+            }
+
+
+    .importance .attract {
+        width: 500px;
+        font-family: 'Readex Pro', sans-serif;
+        position: relative;
+        top: -175px;
+        text-align: left;
+        color: white;
+        font-size: 16px;
+        line-height: 200%;
+        height: fit-content;
+    }
+
+    .importance .button1 {
+        display: flex;
+        flex-direction: row;
+        gap: 25px;
+        justify-content: right;
+        align-items: flex-end;
+        position: relative;
+        z-index: 1;
+        margin-top: -125px;
+        padding-right: 50px
+    }
+
+        .importance .button1 a button.sign1 {
+            width: 150px;
+            height: 50px;
+            border-radius: 10px;
+            background-color: transparent;
+            text-align: center;
+            border: 1px solid white;
+            z-index: 1;
+            transition: background-color 1s, box-shadow 2s;
+            text-decoration: none;
+            color: white;
+            font-family: 'Readex Pro', sans-serif;
+        }
+
+
+
+        .importance .button1 a button.log1 {
+            width: 150px;
+            height: 50px;
+            border-radius: 10px;
+            background-color: transparent;
+            text-align: center;
+            border: 1px solid rgba(0, 255, 0, 0.5);
+            z-index: 1;
+            margin-right: -50px;
+            transition: border-color 2s;
+            color: rgba(0, 255, 0, 0.5);
+            font-family: 'Readex Pro', sans-serif;
+            transition: color 1s;
+        }
+
+        .importance .button1 a button.sign1:hover {
+            background-color: white;
+            border: none;
+            box-shadow: 2px 2px 0px rgba(0, 255, 0, 1);
+            color: black;
+        }
+
+        .importance .button1 a button.log1:hover {
+            border: 2px solid rgba(0, 255, 0, 1);
+            color: rgba(0, 255, 0, 1);
+        }
+
+
+    .need {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0px;
+        margin-top: 100px;
+    }
+
+        .need h4 {
+            font-family: 'Readex Pro', sans-serif;
+            text-align: left;
+            height: fit-content;
+            text-shadow: 0px 1px 2px black;
+            width: 200px;
+        }
+
+        .need p {
+            font-family: 'Readex Pro', sans-serif;
+            text-align: left;
+            height: fit-content;
+            width: 450px;
+            font-size: 15px;
+            font-weight: 600;
+            margin-top: 50px;
+        }
+
+        .need .money {
+            display: flex;
+            justify-content: left;
+            align-items: flex-start;
+            flex-direction: column;
+            gap: 200px;
+            margin-left: 120px;
+        }
+
+            .need .money h3 {
+                font-family: 'Readex Pro', sans-serif;
+                text-align: center;
+                height: fit-content;
+                width: 400px;
+                margin-top: 50px;
+                margin-left: -75px;
+                text-shadow: 1px 1px 1px black;
+            }
+
+            .need .money img {
+                margin-top: -200px;
+                width: 250px;
+                height: 200px;
+            }
+}

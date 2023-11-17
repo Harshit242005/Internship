@@ -1,0 +1,53 @@
+﻿@page
+@model Enhance.Pages.FreelancerModel
+@{
+    ViewData["Title"] = "Freelancer page";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/Freelancer.css?version=1" asp-append-version="true" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+
+<div class="Image">
+    @if (@Model.Image != null)
+    {
+        <a href="/Profile?Id=@Model.Id"><img src="data:image/png;base64,@Convert.ToBase64String(@Model.Image)" alt="User Image" /></a>
+    }
+    else
+    {
+        <img src="~/Images/use.jpg" alt="User Image" />
+    }
+
+   
+</div>
+
+<div class="BidData">
+    <div class="Amount">
+        <h3 class="bid">Amount</h3>
+        <p>@Model.Amount</p>
+    </div>
+
+    <div class="Time">
+        <h3 class="duration">Duration</h3>
+        <p>@Model.Duration @Model.DurationType</p>
+    </div>
+
+    <div class="Description">
+        <h3>Description</h3>
+        <p>@Model.Description</p>
+    </div>
+    <div class="Message">
+        <h3>Message</h3>
+        <a href="mailto:@Model.Gmail"><img src="~/Images/message.svg" style="width: 25px; height: 25px;"></a>
+    </div>
+</div>
+
+<form method="post">
+    <input type="hidden" name="Number" value="@Model.ProjectNumber"/>
+    <button>Withdraw</button>
+</form>
