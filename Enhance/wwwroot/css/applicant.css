@@ -1,0 +1,91 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    font-family: 'Readex Pro', sans-serif;
+}
+
+.applicant {
+    display: flex;
+    flex-direction: column;
+}
+
+.applicant-data {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: first baseline;
+    gap: 100px;
+}
+
+    .applicant-data .Nickname
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+
+    }
+
+    .applicant-data .Image
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+        flex-direction: column;
+        margin-top: -50px;
+    }
+
+        .applicant-data .Image img
+        {
+            width: 50px;
+            height: 50px;
+            border: none;
+            border-radius: 50%;
+        }
+
+        .applicant-data .Finished {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+            flex-direction: column;
+        }
+
+    .applicant-data .Approved {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+        flex-direction: column;
+    }
+
+    .applicant-data .acceptRejectButton {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+        flex-direction: column;
+    }
+
+    .applicant-data .acceptRejectButton form button
+    {
+        width: 300px;
+        height: 50px;
+        background-color: transparent;
+        color: black;
+        text-align: center;
+        transition: 0.3s;
+        border: 1px solid black;
+    }
+
+        .applicant-data .acceptRejectButton form button:hover
+        {
+            border-radius: 20px;
+            background-color: black;
+            color: white;
+        }

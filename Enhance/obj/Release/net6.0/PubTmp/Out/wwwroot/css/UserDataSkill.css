@@ -1,0 +1,81 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    font-family: 'Readex Pro', sans-serif;
+}
+
+.badge_1 {
+    width: 360px;
+    height: 60px;
+    background-color: #04FF1D;
+    color: black;
+    border: none;
+    border-radius: 30px;
+    text-align: center;
+    padding-top: 17px;
+    float: right;
+}
+
+
+form {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+    
+
+
+    form select {
+        width: 1200px;
+        height: 50px;
+        text-align: center;
+        margin-top: 200px;
+        
+    }
+
+        form select:focus {
+            outline: none;
+        }
+
+    form button {
+        float: left;
+        width: 200px;
+        height: 40px;
+        color: black;
+        background-color: #04FF1D;
+        border: none;
+        transition: 0.3s;
+        border-radius: 10px;
+        font-weight: 500;
+        box-shadow: 2px 2px 1px black;
+    }
+
+    form button:hover
+    {
+        box-shadow:none;
+    }
+
+.button{
+    float: right;
+    margin-top: 50px;
+    width: 200px;
+    height: 40px;
+    background-color: transparent;
+    border: 1px solid black;
+    transition: 0.3s;
+}
+
+.button:hover
+{
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 20px;
+}

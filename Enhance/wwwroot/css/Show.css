@@ -1,0 +1,320 @@
+﻿
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Readex Pro', sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+
+
+img {
+    width: 100px;
+    height: 100px;
+    border: none;
+    border-radius: 50%;
+}
+
+a button.Change {
+    width: 281px;
+    height: 85px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    background: #04FF1D;
+    color: white;
+    float: right;
+    border: none;
+    color: #FFF;
+    text-align: center;
+    font-family: Readex Pro;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    box-shadow: 0px 4px 4px 2px rgba(0, 0, 0, 0.25);
+    transition: 0.3s;
+}
+
+    a button.Change:hover {
+        font-size: 20.5px;
+        box-shadow: none;
+    }
+
+
+.addSkill {
+    padding-top: 100px;
+}
+
+#addSkill a button {
+    width: 1000px;
+    height: 50px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+
+
+.image_data {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    justify-content: left;
+    align-items: flex-start;
+}
+
+    .image_data .projects {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        align-items: flex-start;
+        gap: 25px;
+    }
+
+        .image_data .projects p.heading {
+            color: #000;
+            text-align: center;
+            font-family: Readex Pro;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+
+        .image_data .projects .projects-data {
+            display: flex;
+            flex-direction: row;
+            justify-content: left;
+            align-items: flex-start;
+            gap: 200px;
+        }
+
+            .image_data .projects .projects-data .finished {
+                width: fit-content;
+                height: fit-content;
+                flex-shrink: 0;
+                border-radius: 10px;
+                background: linear-gradient(135deg, rgba(255, 255, 255, 0.64) 0%, rgba(128, 0, 255, 0.25) 54.48%, rgba(0, 255, 240, 0.15) 100%);
+                box-shadow: 0px 4px 18px 0px rgba(0, 0, 0, 0.25);
+            }
+
+                .image_data .projects .projects-data .finished .finished-data {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    margin-top: 25px;
+                    padding-left: 50px;
+                    padding-right: 50px;
+                    padding-bottom: 25px;
+                }
+
+                    .image_data .projects .projects-data .finished .finished-data p.heading {
+                        width: 235px;
+                    }
+
+                        .image_data .projects .projects-data .finished .finished-data p.heading span {
+                            color: #000;
+                            font-family: Readex Pro;
+                            font-size: 40px;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: normal;
+                        }
+
+                    .image_data .projects .projects-data .finished .finished-data p.heading {
+                        color: #000;
+                        font-family: Readex Pro;
+                        font-size: 32px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: normal;
+                    }
+
+                    .image_data .projects .projects-data .finished .finished-data p.number {
+                        color: #000;
+                        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                        font-family: Readex Pro;
+                        font-size: 42px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                    }
+
+            .image_data .projects .projects-data .approved {
+                width: fit-content;
+                height: fit-content;
+                flex-shrink: 0;
+                border-radius: 10px;
+                background: linear-gradient(135deg, rgba(0, 255, 240, 0.2) 4%, rgba(128, 0, 255, 0.50) 100%);
+                box-shadow: 0px 4px 18px 0px rgba(0, 0, 0, 0.25);
+            }
+
+                .image_data .projects .projects-data .approved .approved-data {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    margin-top: 25px;
+                    padding-left: 50px;
+                    padding-right: 50px;
+                    padding-bottom: 25px;
+                }
+
+                    .image_data .projects .projects-data .approved .approved-data p.heading {
+                        width: 235px;
+                    }
+
+                        .image_data .projects .projects-data .approved .approved-data p.heading span {
+                            color: #000;
+                            font-family: Readex Pro;
+                            font-size: 40px;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: normal;
+                        }
+
+                    .image_data .projects .projects-data .approved .approved-data p.heading {
+                        color: #000;
+                        font-family: Readex Pro;
+                        font-size: 32px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: normal;
+                    }
+
+                    .image_data .projects .projects-data .approved .approved-data p.number {
+                        color: #000;
+                        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                        font-family: Readex Pro;
+                        font-size: 42px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                    }
+
+.container .w3-center a button {
+    width: 278px;
+    height: 76px;
+    flex-shrink: 0;
+    border-radius: 60px;
+    border: 1px solid #000;
+    background: rgba(255, 255, 255, 0.00);
+    box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 25%);
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+
+    .container .w3-center a button:hover {
+        box-shadow: none;
+    }
+
+.personal {
+    width: 1268px;
+    height: 350px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background-color: transparent;
+    
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+}
+
+    .personal .head p {
+        color: #000;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        font-family: Readex Pro;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        text-decoration-line: underline;
+    }
+
+    .personal .row-data
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: left;
+    }
+
+        .personal .row-data .row {
+            flex-direction: row; flex-wrap: nowrap; align-content: space-around; justify-content: center; align-items: center;
+            margin-left: 250px;
+        }
+
+            .personal .row-data .row img
+            {
+                width: 100px;
+                height: 100px;
+            }
+
+            .personal .row-data .row p {
+                color: #000;
+                font-family: Readex Pro;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+            }
+
+            .box {
+                display: flex;
+                flex-direction: column;
+                gap: 100px;
+            }
+
+@media screen and (max-width: 800px) {
+    .addSkill {
+        padding-top: 50px;
+    }
+
+        .addSkill a button {
+            width: 400px;
+            height: 50px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            border: 1px solid white;
+        }
+
+    .col {
+        display: flex;
+        flex-direction: row;
+        gap: 100px;
+        margin-left: -150px;
+        margin-top: 200px;
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+    }
+
+        .col .row {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+        }
+
+    img {
+        width: 100px;
+        height: 100px;
+        border: none;
+        border-radius: 50%;
+        filter: drop-shadow(0px 6px 12px #E339FF);
+    }
+}

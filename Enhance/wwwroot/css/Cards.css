@@ -1,0 +1,181 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    font-family: 'Readex Pro', sans-serif;
+}
+
+.card-collection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-top: 100px;
+    font-family: 'Readex Pro', sans-serif;
+}
+
+    .card-collection .card {
+        background: black;
+        color: white;
+        filter: drop-shadow(5px 5px 10px #9A3737);
+        border-radius: 25px;
+        border: none;
+        width: 1200px;
+        height: fit-content;
+        max-height: fit-content;
+        word-break: break-word;
+        font-family: 'Readex Pro', sans-serif;
+    }
+
+        /* to hide the card whose cid exist in the table */
+        .card-collection .card.hidden-card
+        {
+            display: none;
+        }
+
+        .card-collection .card .user-info {
+            display: flex;
+            flex-direction: row;
+            justify-content: left;
+            align-items: last baseline;
+            gap: 25px;
+            color: white;
+            padding-top: 25px;
+            padding-left: 50px;
+            font-family: 'Readex Pro', sans-serif;
+        }
+
+        .card-collection .card .Bid_Duration {
+            margin-left: 900px;
+            margin-top: -75px;
+            color: white;
+            font-family: 'Readex Pro', sans-serif;
+        }
+
+        .card-collection .card .user-info .user-check img {
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+            border: none;
+            z-index: 999;
+            font-family: 'Readex Pro', sans-serif;
+        }
+
+        .card-collection .card .user-info .user-check {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            font-family: 'Readex Pro', sans-serif;
+        }
+
+            .card-collection .card .user-info .user-check .active-check {
+                background-color: #00E94F;
+                width: 15px;
+                height: 15px;
+                filter: drop-shadow(1px 1px 10px black);
+                border-radius: 50%;
+                border: none;
+                margin-top: 50px;
+                margin-left: -12px;
+                z-index: -1;
+                position: relative;
+                font-family: 'Readex Pro', sans-serif;
+            }
+
+            .card-collection .card .user-info .user-check .inactive-check {
+                background-color: black;
+                width: 15px;
+                height: 15px;
+                filter: drop-shadow(1px 1px 10px black);
+                border-radius: 50%;
+                border: none;
+                margin-top: 50px;
+                margin-left: -12px;
+                z-index: -1;
+                position: relative;
+                font-family: 'Readex Pro', sans-serif;
+            }
+
+            .card-collection .card .card-mid {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-content: center;
+                align-items: center;
+                padding-left: 50px;
+                color: white;
+                font-family: 'Readex Pro', sans-serif;
+            }
+
+        .card-collection .card .card-bottom {
+            display: flex;
+            flex-direction: column;
+            justify-content: left;
+            padding-left: 50px;
+            color: white;
+            margin-bottom: -75px;
+            font-family: 'Readex Pro', sans-serif;
+        }
+
+        .card-collection .card button {
+            background-color: rgb(91, 255, 78);
+
+            text-align: center;
+            color: white;
+            border-radius: 25px;
+            font-weight: bold;
+            border: none;
+            width: 193px;
+            height: 47px;
+            box-shadow: 2px 2px 0px black;
+            z-index: 1;
+            transition: 0.5s;
+            float: right;
+            margin-right: 25px;
+            margin-bottom: 25px;
+            font-family: 'Readex Pro', sans-serif;
+            margin-top: 25px;
+        }
+
+        .card-collection .card a button:hover {
+            box-shadow: none;
+            background-color: black;
+            border: 1px solid white;
+            color: white;
+            font-family: 'Readex Pro', sans-serif;
+        }
+
+
+
+/* code to make the website the responsive and increase it's looks and appearance */
+@media only screen and (max-width: 800px) {
+    /* Styles for phones */
+    /* ... */
+
+    .card-collection .card
+    {
+        width: 450px;
+        max-width: 450px;
+        height: fit-content;
+    }
+
+        .card-collection .card .Bid_Duration {
+            margin-left: 50px;
+            margin-top: 25px;
+        }
+
+        .card-collection .card button
+        {
+            margin-top: 100px;
+            margin-right: 75px;
+        }
+
+        .card-collection .card .card-mid
+        {
+            text-align: center;
+            margin-left: -10px;
+            padding-right: 25px;
+        }
+}
