@@ -1,0 +1,219 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+* {
+    font-family: 'Readex Pro', sans-serif;
+}
+
+.Heading {
+    text-align: left;
+    padding-top: 50px;
+    max-width: 800px;
+    font-family: 'Readex Pro', sans-serif;
+}
+
+.Description {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+    padding-top: 145px;
+    width: 800px;
+    font-family: 'Readex Pro', sans-serif;
+}
+
+.Duration_Post .PostDate {
+    text-align: right;
+    padding-top: -100px;
+    font-family: 'Readex Pro', sans-serif;
+    margin-right: 0px;
+}
+
+.Duration_Post .Duration {
+    float: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+    gap: 10px;
+    margin-right: 10px;
+    font-family: 'Readex Pro', sans-serif;
+}
+
+.Duration_Post {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    float: right;
+    justify-content: left;
+    align-items: flex-start;
+    margin-top: -75px;
+    font-family: 'Readex Pro', sans-serif;
+}
+
+form .Description {
+    float: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+    gap: 0px;
+    margin-right: -100px;
+    margin-top: -250px;
+    width: fit-content;
+}
+
+    form .Description textarea {
+        width: 508px;
+        height: 229px;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 4px 4px 2px black;
+        font-family: 'Readex Pro', sans-serif;
+    }
+
+    form .Description textarea:focus
+    {
+        outline: none;
+    }
+
+    form .Description textarea::placeholder
+    {
+        padding: 25px;
+    }
+
+form .Bid_Duration {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    justify-content: left;
+    align-items: flex-start;
+    float: left;
+    margin-top: 150px;
+}
+
+    form .Bid_Duration .Bid {
+        display: flex;
+        flex-direction: column;
+        gap: 47px;
+        justify-content: left;
+        align-items: flex-start;
+        font-family: 'Readex Pro', sans-serif;
+    }
+
+
+        form .Bid_Duration .Bid input {
+            width: 200px;
+            height: 50px;
+            box-shadow: 4px 4px 0px black;
+            border-radius: 10px;
+            background-color: transparent;
+            font-family: 'Readex Pro', sans-serif;
+        }
+
+    form .Bid_Duration .Duration_value {
+        display: flex;
+        flex-direction: column;
+        gap: 47px;
+        justify-content: left;
+        align-items: flex-start;
+        font-family: 'Readex Pro', sans-serif;
+    }
+
+        form .Bid_Duration .Duration_value input {
+            width: 200px;
+            height: 50px;
+            box-shadow: 4px 4px 0px black;
+            border-radius: 10px;
+            background-color: transparent;
+            font-family: 'Readex Pro', sans-serif;
+        }
+
+    form .Bid_Duration .Duration {
+        display: flex;
+        flex-direction: column;
+        gap: 47px;
+        justify-content: left;
+        align-items: flex-start;
+        font-family: 'Readex Pro', sans-serif;
+        
+    }
+
+        form .Bid_Duration .Duration select {
+            width: 200px;
+            height: 50px;
+            box-shadow: 4px 4px 0px black;
+            border-radius: 10px;
+            background-color: transparent;
+            font-family: 'Readex Pro', sans-serif;
+        }
+
+form .btn {
+    float: right;
+    background-color: #04FF1D;
+    text-align: center;
+    color: black;
+    width: 214px;
+    height: 65px;
+    box-shadow: 4px 4px 0px rgba(0, 0, 0 0.5);
+    border: none;
+    border-radius: 10px;
+    margin-top: 50px;
+    margin-right: -50px;
+    font-family: 'Readex Pro', sans-serif;
+    transition: 0.5s;
+}
+
+    form .btn:hover {
+        border: 2px solid black
+    }
+
+@media only screen and (max-width: 600px) {
+    /* Styles for phones */
+    /* ... */
+    body {
+        overflow-x: hidden;
+    }
+    
+
+    form {
+        margin-top: -50px;
+    }
+
+    form .Bid_Duration {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        justify-content: center;
+        align-items: center;
+        float: left;
+        margin-top: 50px;
+    }
+
+    form .Description {
+        float: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        align-items: flex-start;
+        gap: 10px;
+
+        margin-top: -100px;
+        width: fit-content;
+    }
+
+        form .Description textarea {
+            width: 400px;
+            height: 400px;
+        }
+
+    form .btn {
+        float: left;
+        margin-top: 50px;
+        margin-right: 0px;
+        font-weight: bold;
+    }
+}

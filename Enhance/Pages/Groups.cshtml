@@ -1,0 +1,120 @@
+﻿@page
+@model Enhance.Pages.GroupsModel
+@{
+    ViewData["Title"] = "Groups page";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/AllProject.css?version=1" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Groups.css?version=1" asp-append-version="true" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+
+<div class="buttons">
+    <div class="createButton">
+        @{
+            bool disableButton = Model.GroupUserIds.Contains(LoginModel.UserId) || GroupsModel.Exist;
+        }
+        <a href="/CreateGroup">
+            <button @if (disableButton)
+            {
+                <text>disabled</text>
+            }><i class="fa fa-plus"></i>Create</button>
+        </a>
+    </div>
+
+
+    <div class="applicantButton">
+        <a href="/Applicant?GroupId=@LoginModel.UserId"><button>Applications</button></a>
+    </div>
+</div>
+
+<div class="main" style="padding-top: 100px;">
+
+    <div class="project">
+        <div class="head">
+            <div class="postDate">
+                <h4>Image</h4>
+            </div>
+            <div class="price">
+                <h4 style="margin-left: -25px;">Name</h4>
+            </div>
+
+            <div class="seeProject">
+                <h4>Members</h4>
+            </div>
+            <div class="seeBids">
+                <h4>Projects</h4>
+            </div>
+            <div class="Apply">
+
+                <h4>Apply</h4>
+            </div>
+        </div>
+    </div>
+
+    @foreach (var group in Model.GetGroups)
+    {
+        <div class="project">
+
+
+            <div class="postDate">
+                @if (group.ImageData != null)
+                {
+                    <a href="/Profile?Id=@group.UserId"><img src="data:image/png;base64,@Convert.ToBase64String(group.ImageData)" style="width: 50px; height: 50px; border: none; border-radius: 50%;" alt="User Image" /></a>
+                }
+                else
+                {
+                    <img src="~/Images/use.jpg" alt="User Image" />
+                }
+            </div>
+            <div class="price">
+                <p><span>Name - </span>@group.Name </p>
+            </div>
+            <div class="seeProject">
+                <p><span>Members - </span>  @(group.Members.ToString() + "/5")</p>
+            </div>
+
+            <div class="seeBids">
+                <p><span>Total project by group - </span>@group.Project</p>
+            </div>
+            <div class="Apply">
+                @if (group.IsApplied || GroupsModel.Exist)
+                {
+                    <button type="submit" disabled>Apply</button>
+                }
+                else if (@LoginModel.UserId == group.UserId)
+                {
+                    <form method="post">
+                        <input type="hidden" name="groupId" value="@group.UserId">
+                        <input type="hidden" name="userId" value="@LoginModel.UserId">
+                        <button type="submit" disabled>Apply</button>
+                    </form>
+                }
+                else if (group.Members == 5)
+                {
+                    <form method="post">
+                        <input type="hidden" name="groupId" value="@group.UserId">
+                        <input type="hidden" name="userId" value="@LoginModel.UserId">
+                        <button type="submit" disabled>Apply</button>
+                    </form>
+                }
+
+                else
+                {
+                    <form method="post">
+                        <input type="hidden" name="groupId" value="@group.UserId">
+                        <input type="hidden" name="userId" value="@LoginModel.UserId">
+                        <button type="submit">Apply</button>
+                    </form>
+                }
+            </div>
+        </div>
+    }
+</div>
+

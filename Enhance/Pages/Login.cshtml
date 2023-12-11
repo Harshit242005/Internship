@@ -1,0 +1,39 @@
+﻿@page
+@model Enhance.Pages.LoginModel
+
+@{
+    ViewData["Title"] = "Login page";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/Login.css?version=1" asp-append-version="true" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+
+<img class="firstImage" src="~/Images/LoginFirst.svg" alt="first login image" />
+<form method="post" id="LoginPost">
+    
+    
+    <div class="input-data">
+        <div class="inputs">
+            <label>Gmail</label>
+            <input type="text" placeholder="Enter your gmail" autocomplete="off" name="Email" value="@Model.Email" />
+        </div>
+
+        <div class="inputs">
+            <label>Password</label>
+            <input type="password" placeholder="Enter your password" autocomplete="off" name="Password" value="@Model.Password" />
+        </div>
+
+        <button class="getCode" type="submit">Login</button>
+    </div>
+ 
+</form>
+
+<img class="secondImage" src="~/Images/LoginSecond.svg" alt="second login image" />
+
+<!-- here we will write ajax function to send and recieve response data in respect of session period and change color of active bar -->

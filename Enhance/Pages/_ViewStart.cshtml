@@ -1,0 +1,10 @@
+﻿@{
+    if (ViewData["Page"] != null && ViewData["Page"].ToString() == "Show")
+    {
+        Layout = "_Layout";
+    }
+    else
+    {
+        Layout = "_LayoutWithoutNavigation";
+    }
+}

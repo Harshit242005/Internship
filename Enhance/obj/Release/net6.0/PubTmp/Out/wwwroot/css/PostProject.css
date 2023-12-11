@@ -1,0 +1,242 @@
+﻿* {
+    font-family: 'Readex Pro', sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+form .ProjectName {
+    display: flex;
+    flex-direction: column;
+    gap: 31px;
+    justify-content: left;
+    align-items: flex-start;
+    padding-top: 41px;
+}
+
+    form .ProjectName input {
+        width: 800px;
+        height: 60px;
+        box-shadow: 4px 4px 2px 1px black;
+        border-top: 3px hidden black;
+        border-left: 3px hidden black;
+        border-radius: 10px;
+        text-align: left;
+        padding-top: 15px;
+    }
+
+        form .ProjectName input::placeholder
+        {
+            padding: 10px;
+        }
+
+        form .ProjectName input:focus {
+            outline: none;
+        }
+
+form .Price_Duration {
+    display: flex;
+    flex-direction: row;
+    gap: 139px;
+    justify-content: left;
+    align-items: flex-start;
+    padding-top: 66px;
+}
+
+    form .Price_Duration .Price, .Duration {
+        display: flex;
+        flex-direction: column;
+        gap: 31px;
+        justify-content: left;
+        align-items: flex-start
+    }
+
+        form .Price_Duration .Price .Price_Duration_value {
+            display: flex;
+            flex-direction: row;
+            gap: 42px;
+        }
+
+            form .Price_Duration .Price .Price_Duration_value .PriceValue {
+                width: 177px;
+                height: 46px;
+                background-color: black;
+                text-align: center;
+                color: white;
+                box-shadow: 1px 1px 25px 1px #DF51E2;
+                border: none;
+                border-radius: 7px;
+            }
+
+                form .Price_Duration .Price .Price_Duration_value .PriceValue:focus {
+                    outline: none;
+                }
+
+            form .Price_Duration .Price .Price_Duration_value .Value::placeholder {
+                z-index: 1;
+            }
+
+            form .Price_Duration .Price .Price_Duration_value select.Select {
+                width: 200px;
+                height: 47px;
+                text-align: center;
+                border: 1px solid black;
+                border-radius: 10px;
+                appearance: none;
+                padding: 10px;
+                background-color: transparent;
+            }
+
+
+            form .Price_Duration .Price .Price_Duration_value .Select:focus {
+                outline: none;
+            }
+
+    form .Price_Duration .Duration {
+        display: flex;
+        flex-direction: column;
+        gap: 31px;
+    }
+
+        form .Price_Duration .Duration .Price_Duration_value {
+            display: flex;
+            flex-direction: row;
+            gap: 42px;
+        }
+
+            form .Price_Duration .Duration .Price_Duration_value .DurationValue {
+                width: 177px;
+                height: 46px;
+                background-color: black;
+                text-align: center;
+                color: white;
+                box-shadow: 1px 1px 25px 1px #DF51E2;
+                border: none;
+                border-radius: 7px;
+            }
+
+                form .Price_Duration .Duration .Price_Duration_value .DurationValue:focus {
+                    outline: none;
+                }
+
+                form .Price_Duration .Duration .Price_Duration_value .DurationValue::placeholder {
+                    z-index: 1;
+                }
+
+form .Description {
+    display: flex;
+    flex-direction: column;
+    gap: 31px;
+    justify-content: left;
+    align-items: flex-start;
+    padding-top: 41px;
+}
+
+    form .Description textarea {
+        width: 1114px;
+        height: 121px;
+        box-shadow: 4px 4px 2px 1px black;
+        border-top: 3px hidden black;
+        border-left: 3px hidden black;
+        border-radius: 10px;
+        text-align: left;
+    }
+
+        form .Description textarea::placeholder
+        {
+            padding: 10px;
+        }
+
+        form .Description textarea:focus {
+            outline: none;
+        }
+
+form .btn {
+    float: right;
+    width: 175px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #04FF1D;
+    color: black;
+    transition: 1s;
+    font-family: 'Readex Pro', sans-serif;
+    box-shadow: 5px 5px 0px black;
+}
+
+    form .btn:hover {
+        box-shadow: none;
+        border: 2px solid black;
+    }
+
+
+@media only screen and (max-width: 600px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+        form .ProjectName {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+
+            form .ProjectName label {
+                font-size: 20px;
+                font-weight: bold;
+            }
+
+            form .ProjectName input {
+                width: 450px;
+                max-width: 450px;
+                height: 120px;
+                max-height: fit-content;
+                text-align: left;
+            }
+
+                form .ProjectName input::placeholder {
+                    padding: 25px;
+                    text-align: left;
+                }
+
+
+        form .Price_Duration {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        form .Description label {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        form .Description textarea {
+            width: 450px;
+            height: 100px;
+            max-width: 450px;
+        }
+
+            form .Description textarea::placeholder {
+                padding: 25px;
+            }
+
+        form .btn {
+            margin-top: 50px;
+        }
+}

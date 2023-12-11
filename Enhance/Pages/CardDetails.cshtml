@@ -1,0 +1,97 @@
+﻿@page
+@model Enhance.Pages.CardDetailsModel
+
+
+@{
+    ViewData["Title"] = "Project Details";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/CardDetails.css?version=1" asp-append-version="true" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400&display=swap" rel="stylesheet">
+</head>
+
+
+<h2 class="Heading">@Model.ProjectName</h2>
+
+
+<div class="Duration_Post">
+
+    <p> class="PostDate">Post Date - @Model.PostDate</p>
+
+    <div class="Duration">
+        <h3>Duration time and type</h3>
+        <p>@Model.Duration @Model.DurationType</p>
+    </div>
+</div>
+
+<div class="Description">
+    <p>@Model.Description</p>
+</div>
+
+<div class="skills">
+    <h4>Skill Required:</h4>
+    <ul>
+        @foreach (var skill in Model.SkillRequired)
+        {
+            <li>@skill</li>
+        }
+    </ul>
+</div>
+
+
+<form method="post">
+
+    <div class="Bid_Duration">
+
+        <div class="form-group Bid">
+
+            <label for="email">Bid Amount:</label>
+            <input type="text" name="Bid" id="bid" class="form-control" placeholder="Bid Amount" required
+                autocomplete="off" />
+
+        </div>
+
+
+
+        <div class="form-group Duration_value">
+
+            <label for="duration">Duration:</label>
+            <input type="number" name="Duration" id="duration" class="form-control" placeholder="Duration" required
+                autocomplete="off" />
+
+        </div>
+
+        <div class="form-group Duration">
+            <label for="duration">Duration type:</label>
+            <select class="form-select" asp-for="DurationType">
+                <option value="Hour">Hour</option>
+                <option value="Day">Day</option>
+                <option value="Week">Week</option>
+                <option value="Month">Month</option>
+            </select>
+
+        </div>
+
+    </div>
+
+    <div class="form-group Description">
+
+        <label for="description">Description:</label>
+        <textarea name="Description" id="description" placeholder="Description" required autocomplete="off"></textarea>
+
+    </div>
+
+
+
+    <input type="hidden" name="Project_Id" value="@Model.Number" />
+    @{
+        bool disableButton = (@Model.Exist || LoginModel.UserId == @Model.UserId);
+    }
+    <button type="submit" class="btn" @(disableButton || @Model.Status == 1 ? "disabled" : "")>Place Bid</button>
+
+</form>

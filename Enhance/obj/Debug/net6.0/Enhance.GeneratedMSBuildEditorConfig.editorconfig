@@ -1,0 +1,163 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Enhance
+build_property.RootNamespace = Enhance
+build_property.ProjectDir = c:\Users\abc\source\repos\Enhance\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = c:\Users\abc\source\repos\Enhance
+build_property._RazorSourceGeneratorDebug = 
+
+[c:/Users/abc/source/repos/Enhance/Pages/AllProjects.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWxsUHJvamVjdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/abc/source/repos/Enhance/Pages/AlreadyExist.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWxyZWFkeUV4aXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/abc/source/repos/Enhance/Pages/Applicant.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXBwbGljYW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/abc/source/repos/Enhance/Pages/Bids.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQmlkcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/abc/source/repos/Enhance/Pages/CardDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FyZERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/abc/source/repos/Enhance/Pages/Cards.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FyZHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/abc/source/repos/Enhance/Pages/ChangeProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2hhbmdlUHJvZmlsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/abc/source/repos/Enhance/Pages/Close.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xvc2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/abc/source/repos/Enhance/Pages/Creategroup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3JlYXRlZ3JvdXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/abc/source/repos/Enhance/Pages/EnrolledGroup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW5yb2xsZWRHcm91cC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/abc/source/repos/Enhance/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/abc/source/repos/Enhance/Pages/ErrorType.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3JUeXBlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/abc/source/repos/Enhance/Pages/Freelancer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRnJlZWxhbmNlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/abc/source/repos/Enhance/Pages/Groups.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR3JvdXBzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/abc/source/repos/Enhance/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/abc/source/repos/Enhance/Pages/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/abc/source/repos/Enhance/Pages/Mygroup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTXlncm91cC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/abc/source/repos/Enhance/Pages/Null.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTnVsbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/abc/source/repos/Enhance/Pages/PostProject.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9zdFByb2plY3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/abc/source/repos/Enhance/Pages/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/abc/source/repos/Enhance/Pages/Profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZmlsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/abc/source/repos/Enhance/Pages/ProfileSkills.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZmlsZVNraWxscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/abc/source/repos/Enhance/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/abc/source/repos/Enhance/Pages/ShowBids.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hvd0JpZHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/abc/source/repos/Enhance/Pages/ShowCid.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hvd0NpZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/abc/source/repos/Enhance/Pages/ShowData.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hvd0RhdGEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/abc/source/repos/Enhance/Pages/Signup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2lnbnVwLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/abc/source/repos/Enhance/Pages/Skill.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2tpbGwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/abc/source/repos/Enhance/Pages/SkillProject.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2tpbGxQcm9qZWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/abc/source/repos/Enhance/Pages/UserData.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlckRhdGEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/abc/source/repos/Enhance/Pages/UserDataSkills.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlckRhdGFTa2lsbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/abc/source/repos/Enhance/Pages/UserProjectDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclByb2plY3REZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/abc/source/repos/Enhance/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/abc/source/repos/Enhance/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/abc/source/repos/Enhance/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-7njv8ho310
+
+[c:/Users/abc/source/repos/Enhance/Pages/Shared/_LayoutWithoutNavigation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXRXaXRob3V0TmF2aWdhdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = b-xpcg89i2as
