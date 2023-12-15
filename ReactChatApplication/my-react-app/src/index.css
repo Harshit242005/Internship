@@ -1,0 +1,19 @@
+body
+{
+  overflow-x: hidden;
+  overflow-y: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+
+
+@font-face {
+  font-family: 'ReadexPro';
+  src: url('./ReadexPro.ttf') format('truetype');
+}
+
+*
+{
+  font-family: 'ReadexPro';
+}
