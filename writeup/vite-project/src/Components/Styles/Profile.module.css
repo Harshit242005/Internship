@@ -1,0 +1,164 @@
+.profileImage {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: none;
+}
+
+.profileText {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+    gap: 25px;
+}
+
+.profileImageText {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+
+.profileHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    gap: 600px;
+    align-items: last baseline baseline;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-top: 100px;
+}
+
+.backButton {
+    width: 200px;
+    height: 50px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0px 2px 8px black;
+    margin-top: 50px;
+    margin-left: 50px;
+    transition: 0.3s;
+}
+
+.backButton:hover {
+    box-shadow: none;
+    font-size: 17px;
+    border-radius: 10px;
+}
+
+
+.profilename {
+    color: #000;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Readex Pro;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.Profession {
+    color: #000;
+    font-family: Readex Pro;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    width: 250px;
+}
+
+.About {
+    color: #000;
+    text-align: right;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Readex Pro;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    width: 250px;
+
+}
+
+.profileBlogImgae {
+    width: 200px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px black;
+    height: 125px;
+}
+
+.profileBlogData {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    gap: 100px;
+    padding: 25px;
+}
+
+.profileBlogs {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    padding-left: 100px;
+    padding-right: 100px;
+    gap: 0px;
+    max-height: 400px;
+    margin-top: 100px;
+    overflow-y: auto;
+}
+
+.profileBlog {
+    width: 800px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 200px;
+    transition: 0.3s;
+}
+
+.profileBlog:hover {
+    box-shadow: none;
+}
+
+.profileBlogViews,
+.profileBloglikes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: last baseline baseline;
+
+}
+
+.static {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+}
+
+.ProfileBlogHeading {
+    color: #000;
+    text-align: center;
+    font-family: Readex Pro;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.ProfileBlogHeader
+{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+}

@@ -1,0 +1,159 @@
+.heading1 {
+    color: #000;
+    font-family: Readex Pro;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: capitalize;
+    padding-left: 50px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    padding-top: 25px;
+}
+
+body
+{
+    overflow-x: hidden;
+}
+
+.NavbarImage {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+    gap: 25px;
+    padding-left: 50px;
+    overflow-y: auto;
+    max-height: 500px;
+}
+
+.Image {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: last baseline;
+    gap: 400px;
+}
+
+.Image label {
+    color: #000;
+    font-family: Readex Pro;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.heading2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+    gap: 10px;
+
+}
+
+.heading2 label {
+    color: #000;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Readex Pro;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.heading2 input:focus {
+    outline: none;
+}
+
+.heading2 input {
+    width: 1000px;
+    height: 75px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #000;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    color: white;
+    padding-left: 10px;
+}
+
+.heading2 input::placeholder {
+    padding-left: 25px;
+    color: rgba(255, 255, 255, 0.50);
+    font-family: Readex Pro;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+    gap: 10px;
+
+}
+
+.text textarea:focus {
+    outline: none;
+}
+
+.text textarea::placeholder {
+    color: rgba(0, 0, 0, 0.25);
+    font-family: Readex Pro;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-left: 25px;
+    padding-top: 25px;
+}
+
+.text textarea {
+    width: 975.61px;
+    height: 600px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    background: rgba(255, 255, 255, 0.00);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.createButton {
+    width: 300px;
+    height: 75px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background: linear-gradient(95deg, rgba(166, 255, 255, 0.76) 0%, rgba(253, 149, 255, 0.50) 100%);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border: none;
+    color: #000;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Readex Pro;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    transition: 0.3s;
+    margin-bottom: 50px;
+}
+
+.createButton:hover
+{
+    box-shadow: none;
+    width: 350px;
+    height: 100px;
+
+}

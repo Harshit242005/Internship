@@ -1,0 +1,144 @@
+.BlogImage {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: none;
+}
+
+.blogData {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: first baseline;
+    gap: 100px;
+    margin-top: 100px;
+}
+
+body
+{
+    overflow-y: auto !important;
+}
+
+.textData {
+    width: 800px;
+}
+
+.heading1 {
+    color: #000;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Readex Pro;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.textData {
+    color: #000;
+    font-family: Readex Pro;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150.5%;
+    /* 36.12px */
+}
+
+.LikeAndBookmarked {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+
+}
+
+.LikeAndBookmarked i {
+    font-size: 30px;
+}
+
+
+.blogs {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+    margin-top: 200px;
+    margin-bottom: 50px;
+    max-width: 800px;
+    overflow-x: auto;
+    height: fit-content;
+    gap: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.extraBlogImage {
+    width: 250px;
+    height: 150px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.ExtraBlogDataHeading {
+    display: none;
+}
+
+.extraBlogImage:hover {
+    opacity: 50%;
+}
+
+.extraBlogImage:hover+.ExtraBlogDataHeading {
+    position: relative;
+    top: -100px;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    display: block;
+}
+
+.BackButton {
+    width: 200px;
+    height: 50px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0px 2px 8px black;
+    margin-top: 25px;
+    margin-left: 25px;
+    transition: 0.3s;
+}
+
+.BackButton:hover {
+    box-shadow: none;
+    font-size: 17px;
+    border-radius: 10px;
+}
+
+.blogLink {
+    text-decoration: none;
+}
+
+.more {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+    margin-top: -100px;
+}
+
+.moreText {
+    position: relative;
+    top: 200px;
+    color: #000;
+    font-family: Readex Pro;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150.5%;
+    /* 36.12px */
+    left: 300px;
+    margin-left: 90px;
+}

@@ -1,0 +1,229 @@
+.heading1 {
+    color: #000;
+    font-family: Readex Pro;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    padding-left: 50px;
+    line-height: normal;
+}
+
+body {
+    overflow: auto;
+}
+
+.heading1 span {
+    color: #000;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Readex Pro;
+    font-size: 72px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.heading2 {
+    color: #000;
+    font-family: Readex Pro;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    padding-left: 50px;
+    line-height: normal;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    justify-content: left;
+    align-items: flex-start;
+    padding-left: 50px;
+}
+
+.nickname {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.nickname label {
+    color: #000;
+    font-family: Readex Pro;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.nickname input:focus {
+    outline: none;
+}
+
+.nickname input::placeholder {
+    color: rgba(0, 0, 0, 0.50);
+    font-family: Readex Pro;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding-left: 25px;
+}
+
+.nickname input {
+    width: 1000px;
+    height: 75px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.50);
+    background: rgba(255, 255, 255, 0.00);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding-left: 10px;
+}
+
+.image {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    gap: 500px;
+}
+
+.image label {
+    color: #000;
+    font-family: Readex Pro;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.image input[type="file"] {
+    cursor: pointer;
+
+}
+
+.image input:focus {
+    outline: none;
+}
+
+image input::placeholder {
+    display: none;
+}
+
+
+.story {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.story label {
+    color: #000;
+    font-family: Readex Pro;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.story textarea {
+    width: 1000px;
+    height: 250px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.50);
+    background: rgba(255, 255, 255, 0.00);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.story textarea:focus {
+    outline: none;
+}
+
+.story textarea::placeholder {
+    color: rgba(0, 0, 0, 0.50);
+    font-family: Readex Pro;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding-left: 25px;
+    padding-top: 25px;
+}
+
+.identify {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.identify label {
+    color: #000;
+    font-family: Readex Pro;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.identify input:focus {
+    outline: none;
+}
+
+.identify input::placeholder {
+    color: rgba(0, 0, 0, 0.50);
+    font-family: Readex Pro;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding-left: 25px;
+}
+
+.identify input {
+    width: 1000px;
+    height: 75px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.50);
+    background: rgba(255, 255, 255, 0.00);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding-left: 10px;
+}
+
+form .uploadData {
+    border-radius: 10px;
+    background: linear-gradient(95deg, rgba(166, 255, 255, 0.76) 0%, rgba(253, 149, 255, 0.50) 100%);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    width: 250px;
+    height: 75px;
+    flex-shrink: 0;
+    color: #000;
+    font-family: Readex Pro;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    border: none;
+    margin-bottom: 50px;
+    transition: 0.3s;
+}
+
+form .uploadData:hover {
+    box-shadow: none;
+    width: 300px;
+    height: 80px;
+    border: none;
+}
+
+
+

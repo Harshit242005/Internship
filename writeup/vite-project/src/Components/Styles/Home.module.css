@@ -1,0 +1,146 @@
+.NavbarImage {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+}
+
+body {
+  
+    overflow-y: hidden !important;
+}
+.blogs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center;
+    align-items: center; */
+    gap: 50px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-y: auto; /* Add this to enable the vertical scrollbar */
+    max-height: 600px; /* Adjust the max-height to your desired value */
+    /* You can also use other units like % or vh depending on your layout */
+}
+
+.blogPost {
+    width: 1135px;
+    height: fit-contents;
+    flex-shrink: 0;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+    gap: 25px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    background: rgba(255, 255, 255, 0.00);
+    box-shadow: 0px 4px 4px 2px rgba(0, 0, 0, 0.25);
+    transition: 0.3s;
+    padding: 25px;
+    margin-bottom: 50px;
+}
+
+.blogPost:hover
+{
+    box-shadow: none;
+}
+
+.BlogData {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: left;
+    align-items: flex-start;
+}
+
+.BlogDataNickname {
+    color: #000;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Readex Pro;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.BlogDataHeading {
+    color: #000;
+    font-family: Readex Pro;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.BlogDataContent {
+    color: #000;
+    font-family: Readex Pro;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.blogPostHeadData {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    justify-content: first baseline baseline;
+    
+}
+
+.BlogPostImageData {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: none;
+}
+
+.Views,
+.Likes {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    justify-content: center;
+
+}
+
+.staticNumber
+{
+    color: black;
+    font-weight: bold;
+}
+
+.BlogDataDate {
+    color: #000;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Readex Pro;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.BlogPostStatcis
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: last baseline;
+    gap: 800px;
+}
+
+.blogPostLink
+{
+    text-decoration: none;
+}
+
+.likeaAndViews
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-self: flex-start;
+}

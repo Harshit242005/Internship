@@ -1,0 +1,107 @@
+.LikedBlogImage
+{
+    width: 100px;
+    height: 100px;
+    border: none;
+    border-radius: 50%;
+}
+
+.LikedBlogs
+{
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    max-height: 600px;
+    overflow-y: auto;
+    align-items: center;
+ 
+}
+
+.LikedBlog
+{
+    transition: 0.3s;
+    width: 800px;
+    height: fit-content;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0,0,0, 0.25);
+    margin-bottom: 100px;
+}
+
+.LikedBlog:hover{
+    box-shadow: none;
+}
+
+.LikedBlogHeadData
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: first baseline baseline;
+    gap: 50px;
+   
+}
+
+.backButton {
+    width: 200px;
+    height: 50px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0px 2px 8px black;
+    margin-top: 25px;
+    margin-left: 25px;
+    transition: 0.3s;
+}
+
+.backButton:hover {
+    box-shadow: none;
+    font-size: 17px;
+    border-radius: 10px;
+}
+
+.views
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: last baseline;
+    align-items: last baseline baseline;
+    gap: 10px;
+}
+
+.likes
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: last baseline;
+    align-items: last baseline baseline;
+    gap: 10px;
+}
+
+.statcis
+{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-left: 0px;
+}
+
+.LikedBlogTextContent
+{
+    max-height: 200px;
+    overflow-y: auto;
+    width: 400px;
+}
+
+.LikedBlogheader
+{
+    font-size: 25px;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: 600;
+    margin-bottom: 100px;
+    text-align: center;
+}
