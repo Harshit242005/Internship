@@ -1,0 +1,57 @@
+name: track
+description: A new Flutter project
+
+publish_to: none # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.1.4 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  file_picker: ^5.0.0
+  open_file: ^3.3.2
+  open_app_file: ^4.0.2
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  path_provider: ^2.1.1
+  sqflite: ^2.3.0
+  path: ^1.8.3
+  sqflite_common_ffi: ^2.3.0+2
+  intl: ^0.18.1
+  win_toast: ^0.3.0
+  flutter_local_notifications: ^16.1.0
+  fluttertoast: ^8.2.2
+  windows_notification: ^0.0.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+  build_runner: ^2.4.6
+
+flutter:
+  
+  uses-material-design: true
+  fonts:
+    - family: ReadexPro
+      fonts:
+        - asset: fonts/ReadexPro.ttf
+  
+  assets:
+    - assets/WorkLabel.png # Add this line to include the asset
+    - assets/StudyLabel.png
+    - assets/EnjoyLabel.png
+    - assets/ExcersiceLabel.png
+    - assets/FamilyLabel.png
+    - assets/FoodLabel.png
+
+ 
+  
+
+
+
+  
