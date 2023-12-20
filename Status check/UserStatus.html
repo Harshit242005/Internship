@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Status Page</title>
+    <link rel="stylesheet" href="users.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+
+<body>
+
+    <h3>Welcome to the User Status Page</h3>
+    <div id="usernameDisplay"></div>
+    <div id="users">
+
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            // Retrieve the username from the query parameters
+            const queryParams = new URLSearchParams(window.location.search);
+            const username = queryParams.get('username');
+
+            // Use the username as needed on the new page
+            console.log('Username:', username);
+
+            // Display the username in an HTML element
+            const usernameDisplay = $('#usernameDisplay');
+            usernameDisplay.html(`Username: ${username}`);
+
+            // Initialize onlineUsers array
+            const onlineUsers = [];
+
+            // Fetch all users data using a GET request
+            $.ajax({
+                type: 'GET',
+                url: 'http://localhost:3000/getusers', // Update the URL based on your server endpoint
+                success: function (users) {
+                    // Loop through the users array and display each user's data
+                    const usersContainer = $('#users');
+                    users.forEach(function (user) {
+                        // Create an image element with the base64 value of the user's image
+                        const imgElement = $('<img>', {
+                            src: 'data:image/png;base64,' + user.image,
+                            alt: 'User Image',
+                            class: 'user-image'
+                        });
+
+                        // Create a div to hold the image and username
+                        const userDiv = $('<div>', { class: 'user-container' });
+                        userDiv.append(imgElement);
+
+                        // Display the username in the div
+                        const usernameParagraph = $('<p>', { text: user.username });
+                        userDiv.append(usernameParagraph);
+
+                        // Check if the user is online and add the "active" class
+                        if (onlineUsers.includes(user.username)) {
+                            userDiv.addClass('active');
+                        }
+
+                        // Append the user div to the users container
+                        usersContainer.append(userDiv);
+                    });
+                },
+                error: function (error) {
+                    console.error('Error fetching users:', error.responseJSON.error);
+                    // Handle the error as needed (display error message, etc.)
+                }
+            });
+
+            // code for the websockets connections
+            // WebSocket connection
+            const ws = new WebSocket('ws://localhost:3001'); // Corrected URL without trailing slash
+            // Wait for the WebSocket connection to open
+            ws.addEventListener('open', () => {
+                // Send a refresh message to the WebSocket server when the connection is open
+                const refreshMessage = {
+                    type: 'refresh',
+                    username: queryParams.get('username')
+                };
+                ws.send(JSON.stringify(refreshMessage));
+            });
+            // Handle incoming WebSocket messages
+            ws.addEventListener('message', function (event) {
+                const message = JSON.parse(event.data);
+                console.log(`message from web sockets ${message}`);
+                if (message.type === 'userStatus') {
+                    // Update onlineUsers array based on the received user status
+                    onlineUsers.length = 0; // Clear the array
+                    onlineUsers.push(...message.onlineUsers);
+                    console.log(`online users ${onlineUsers}`);
+                    // Update the UI based on the new onlineUsers array
+                    updateUI();
+                }
+            });
+
+            // Function to update the UI based on the onlineUsers array
+            function updateUI() {
+                $('.user-container').each(function () {
+                    const username = $(this).find('p').text();
+
+                    if (onlineUsers.includes(username)) {
+                        $(this).addClass('active');
+                    } else {
+                        $(this).removeClass('active');
+                    }
+                });
+            }
+        });
+
+
+    </script>
+
+</body>
+
+</html>

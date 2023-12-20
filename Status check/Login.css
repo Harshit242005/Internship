@@ -1,0 +1,38 @@
+.user_details
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    position: relative;
+    top: 100px;
+}
+
+.user_details input
+{
+    width: 400px;
+    height: 60px;
+    padding-left: 10px;
+    border-radius: 5px;
+    border-color: rgba(0, 0, 0, 0.25);
+}
+
+.user_details input:focus
+{
+    outline: none;
+}
+
+.login_button
+{
+   
+    width: 200px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 50px;
+}
